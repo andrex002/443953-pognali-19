@@ -1,0 +1,28 @@
+.initial-letter__list {
+  .list-reset();
+}
+
+.initial-letter__country {
+  color: @base-text-color;
+}
+.initial-letter span {
+  display: none;
+}
+@media (min-width: @tablet-width) {
+  .initial-letter__item {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .initial-letter {
+    width: 256px;
+  }
+  .initial-letter span {
+    display: inline;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #192144;
+  }
+}

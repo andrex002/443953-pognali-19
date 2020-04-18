@@ -1,11 +1,76 @@
 .add-yourself {
+  position: relative;
+  padding: 30px 0 35px 0;
+  margin-top: -30px;
   background-color: @base-background;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: 4;
 }
 .add-yourself__wrapper {
   .centering();
 }
+.add-yourself__inner {
+  padding-top: 37px;
+  padding-left: 25px;
+  background-image: url(../img/rates@1x.png);
+  background-repeat: no-repeat;
+  background-position: right top 37px;
+  background-size: 99px;
+}
 .add-yourself__title {
+  width: 150px;
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
+}
+.add-yourself__tariffs {
+  margin-bottom: 30px;
+}
+.add-yourself__business-tariff {
+  line-height: 16px;
+  font-weight: 700;
+  color: #192144;
+}
+@media (min-width: @tablet-width) {
+  .add-yourself {
+    padding: 60px 0 48px 0;
+    margin-top: -60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .add-yourself__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+  }
+  .add-yourself__inner {
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 35px;
+    background-position: right 45px bottom 0;
+  }
+  .add-yourself__title {
+    width: auto;
+    margin: 20px 0;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+  .add-yourself__business-tariff {
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+}
+@media (min-width: @desktop-width) {
+  .add-yourself {
+    padding-bottom: 165px;
+  }
+  .add-yourself__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .add-yourself__inner {
+    padding: 80px 71px 0 71px;
+    background-position: right 74px top 285px;
+    background-size: 198px;
+  }
 }

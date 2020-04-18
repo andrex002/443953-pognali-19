@@ -1,4 +1,5 @@
 .filter-block {
+  padding: 25px 25px 22px 25px;
   background-color: @yellow-btn;
   border-radius: 20px;
 }
@@ -7,4 +8,27 @@
   line-height: 22.5px;
   color: @main-blue;
 }
-
+@media (min-width: @tablet-width) {
+  .filter-block {
+    padding: 5px 35px 38px 35px;
+  }
+  .filter-block__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .filter-block__data-input {
+    border-top: 1px solid #f3c72b;
+    border-bottom: 1px solid #f3c72b;
+  }
+}
+@media (min-width: @desktop-width) {
+  .filter-block {
+    width: 285px;
+    padding: 15px 48px 47px 48px;
+    box-sizing: border-box;
+    order: 2;
+  }
+  .filter-block__data-input {
+    border: 0;
+  }
+}

@@ -1,5 +1,11 @@
+.travelmates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .travelmates__list {
   .list-reset();
+  width: 100%;
 }
 .travelmates__show-more {
   font-size: 17px;
@@ -7,4 +13,15 @@
   font-weight: 700;
   color: @main-blue;
   text-transform: uppercase;
+}
+@media (min-width: @tablet-width) {
+  .travelmates__show-more {
+    font-size: 20px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .travelmates {
+    width: 950px;
+    box-sizing: border-box;
+  }
 }

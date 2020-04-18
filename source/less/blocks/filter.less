@@ -1,5 +1,7 @@
 .filter {
+  padding: 0;
   border: 0;
+  border-top: 1px solid #f3c72b;
 }
 .filter__title {
   line-height: 18px;
@@ -10,18 +12,27 @@
 .filter__list {
   .list-reset();
 }
+.filter__list.transport-list {
+  justify-content: flex-start;
+}
 .filter__label {
   font-size: 15px;
   line-height: 15px;
 }
+.filter__level {
+  display: flex;
+}
 .filter__level-value {
+  width: 108px;
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
   color: @main-blue;
   text-align: center;
+  border: 1px solid #cbced9;
 }
 .filter__btn {
+  width: 100%;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -30,4 +41,44 @@
   border: 0;
   border-radius: 20px;
   background-color: #ffffff;
+  cursor: pointer;
+}
+@media (min-width: @tablet-width) {
+  .filter {
+    display: flex;
+    align-items: center;
+    border: 0;
+  }
+  .filter__title {
+    width: 126px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  .filter__list {
+    display: flex;
+  }
+  .filter__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .filter__btn {
+    font-size: 20px;
+  }
+  .filter__level-value {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .filter {
+    display: block;
+  }
+  .filter__list {
+    display: block;
+  }
+  .filter__list.transport-list {
+    display: flex;
+  }
 }

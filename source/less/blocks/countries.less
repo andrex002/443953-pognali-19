@@ -1,17 +1,90 @@
+.countries {
+  position: relative;
+  padding: 80px 0 30px 0;
+  margin-top: -30px;
+  background-color: @base-background;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  z-index: 6;
+}
 .countries__wrapper {
   .centering();
 }
 .countries__title {
+  margin: 20px 25px;
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
 }
 .countries__desc {
+  margin: 20px 25px;
   font-weight: 300;
 }
 .countries__list {
   .list-reset();
 }
+.countries__item {
+  margin: 10px 0;
+}
 .countries__all {
   .square-btn();
+  display: block;
+  padding: 22px 24px;
+}
+@media (min-width: @tablet-width) {
+  .countries {
+    margin-top: -60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .countries__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+    background-image: url(../img/flags-back@1x.png);
+    background-repeat: no-repeat;
+    background-position: right 40px top 0;
+  }
+  .countries__inner {
+    padding: 0 35px;
+  }
+  .countries__title {
+    width: 345px;
+    margin: 20px 0;
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .countries__desc {
+    width: 345px;
+    margin: 20px 0;
+    font-size: 28px;
+    line-height: 33px;
+  }
+  .countries__all {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 28.5px 35px;
+    border-radius: 20px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .countries {
+    padding: 148px 0 140px 0;
+  }
+  .countries__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .countries__inner {
+    position: relative;
+    padding: 73px 0 0 803px;
+  }
+  .countries__list {
+    position: absolute;
+    top: 63px;
+    left: 71px;
+  }
+  .countries__all {
+    display: inline-block;
+    min-width: 274px;
+    max-width: 345px;
+    box-sizing: border-box;
+  }
 }

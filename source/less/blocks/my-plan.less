@@ -1,8 +1,14 @@
 .my-plan {
+  padding-bottom: 30px;
   background-color: #dfe3f0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .my-plan__wrapper {
   .centering();
+}
+.my-plan__inner {
+  padding: 5px 0 20px 0;
 }
 .my-plan__title {
   font-size: 24px;
@@ -13,6 +19,8 @@
   .list-reset();
 }
 .my-plan__item {
+  padding: 20px 25px;
+  margin: 10px 0;
   color: @main-blue;
   background-color: #ffffff;
   border-radius: 10px;
@@ -34,4 +42,60 @@
   color: fade(#000000, 30%);
   text-transform: uppercase;
   letter-spacing: 0.1px;
+}
+@media (min-width: @tablet-width) {
+  .my-plan__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+  }
+  .my-plan__inner {
+    padding: 35px 35px 65px 35px;
+  }
+  .my-plan__title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .my-plan__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .my-plan__route {
+    width: 100%;
+    padding: 25px 30px 25px 35px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 50px;
+    border-bottom: 1px solid #eff0f4;
+  }
+  .my-plan__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .my-plan__edit-btn {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .my-plan {
+    padding-bottom: 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+  .my-plan__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .my-plan__inner {
+    padding: 5px 0 63px 64px;
+  }
+  .my-plan__item {
+    padding: 0 40px;
+  }
+  .my-plan__route {
+    width: 530px;
+    padding: 0;
+    border: 0;
+  }
 }

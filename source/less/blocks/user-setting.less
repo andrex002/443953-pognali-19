@@ -1,7 +1,19 @@
+.user-setting {
+  padding-bottom: 30px;
+}
 .user-setting__wrapper {
   .centering();
 }
+.user-setting__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 22px 0 33px 0;
+}
 .user-setting__level {
+  width: 100px;
+  height: 100px;
+  margin: 0 17.5px;
   font-size: 38px;
   line-height: 38px;
   font-weight: 700;
@@ -13,7 +25,14 @@
   font-weight: 400;
   color: @base-text-color;
 }
+.user-setting__image-block {
+  margin: 0 17.5px;
+  line-height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .user-setting__edit-photo {
+  width: 100%;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -23,4 +42,89 @@
   background-color: #dfe3f0;
   border: 0;
   border-radius: 20px;
+}
+@media (min-width: @tablet-width) {
+  .user-setting__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+  }
+  .user-setting__inner {
+    justify-content: space-between;
+    padding: 64px 35px 50px 35px;
+  }
+  .user-setting__level {
+    width: 94px;
+    height: 94px;
+    margin: 0;
+    order: -2;
+  }
+  .user-setting__image-block {
+    width: 94px;
+    height: 94px;
+    margin: 0;
+    border-radius: 5px;
+  }
+  .user-setting__edit-photo {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+  }
+  .user-setting__transport.fieldset-block {
+    width: 308px;
+    order: -1;
+  }
+}
+@media (min-width: @desktop-width) {
+  .user-setting {
+    padding-bottom: 60px;
+    margin-top: -190px;
+  }
+  .user-setting__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .user-setting__inner {
+    justify-content: flex-end;
+    padding: 0 0 55px 64px;
+  }
+  .user-setting__level {
+    margin-left: 830px;
+    color: #ffffff;
+  }
+  .user-setting__level span {
+    color: #ffffff;
+  }
+  .user-setting__image-block {
+    width: 190px;
+    height: 190px;
+    margin-left: 45px;
+    margin-right: 95px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .user-setting__image {
+    width: 190px;
+    height: 190px;
+  }
+  .user-setting__transport.fieldset-block {
+    width: 384px;
+    margin-left: auto;
+    order: 1;
+    box-sizing: border-box;
+  }
+  .user-setting__edit-photo {
+    width: 190px;
+    padding: 13.5px 0;
+    margin-left: 971px;
+    margin-right: 95px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .user-setting__edit-photo span {
+    display: none;
+  }
+  .user-setting__tags.fieldset-block {
+    width: 730px;
+    box-sizing: border-box;
+  }
 }

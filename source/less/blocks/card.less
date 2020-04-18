@@ -1,31 +1,55 @@
 .card {
+  position: relative;
+  padding: 15px 0 62px 0;
+  margin-bottom: 10px;
   background-color: #ffffff;
   border-radius: 20px;
 }
 .card__title {
+  margin: 0 22px 0 104px;
   font-size: 20px;
   line-height: 20px;
 }
 .card__title a {
   color: @main-blue;
 }
+.card__photo-block {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  line-height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
 .card__likes {
+  padding-left: 38px;
+  margin-left: 67px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
   color: #161c35;
   text-transform: uppercase;
 }
+.card__tags {
+  margin: 0 40px 0 16px;
+  text-align: left;
+}
 .card .tags-travelmates__item {
   font-size: 15px;
 }
+.card__countries-block {
+  border-top: 1px solid #edeff6;
+}
 .card__subtitle {
+  margin: 0;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
 }
 .card__countries-list {
   .list-reset();
+  padding-left: 41px;
+  margin: 0 25px;
 }
 .card__country {
   font-size: 15px;
@@ -34,14 +58,33 @@
   color: @main-blue;
   text-transform: uppercase;
 }
+.card__transport-level {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #edeff6;
+}
+.card__transports {
+  margin-left: 25px;
+}
+.card__transports > .transports-travelmates__item {
+  background-color: #edeff6;
+}
 .card__level {
+  margin-right: 20px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: @main-blue;
 }
+.card__level span {
+  display: none;
+}
 .card__btn {
-  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  display: inline-block;
+  width: 230px;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -50,4 +93,129 @@
   text-transform: uppercase;
   background-color: @yellow-btn;
   border-radius: 20px;
+  transform: translateX(-50%);
+}
+@media (min-width: @tablet-width) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px 0 26px 0;
+    margin-bottom: 40px;
+  }
+  .card .tags-travelmates__item {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .card__photo-block {
+    position: static;
+    width: 190px;
+    height: 190px;
+    margin-left: 35px;
+    margin-right: 35px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .card__photo {
+    width: 190px;
+    height: 190px;
+  }
+  .card__name-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 320px;
+  }
+  .card__title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+    order: -2;
+  }
+  .card__btn {
+    position: static;
+    width: auto;
+    padding: 0 32px;
+    font-size: 20px;
+    line-height: 30px;
+    transform: translateX(0);
+  }
+  .card__likes {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .card__tags {
+    order: -1;
+  }
+  .card__countries-block {
+    width: 100%;
+    order: 2;
+  }
+  .card__countries-list {
+    display: flex;
+    padding-left: 0;
+    margin: 0 36px;
+  }
+  .card__transport-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0;
+  }
+  .card__transports {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .card__subtitle {
+    display: none;
+  }
+  .card__countries-block .card__subtitle {
+    display: block;
+  }
+  .card__level {
+    margin-right: 0;
+  }
+  .card__level span {
+    display: inline;
+    font-size: 14px;
+    line-height: 14px;
+    color: fade(@base-text-color, 40%);
+  }
+  .card__country {
+    padding-left: 46px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .card {
+    padding: 0 44px 0 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  .card__photo-block {
+    margin-left: 0;
+    border-radius: 0;
+  }
+  .card__countries-list {
+    display: block;
+  }
+  .card__countries-block .card__subtitle {
+    display: none;
+  }
+  .card__countries-block {
+    width: auto;
+    border: 0;
+    order: 0;
+  }
+  .card__transport-level {
+    position: absolute;
+    right: 44px;
+    bottom: 42px;
+    flex-direction: row;
+  }
+  .card__transports {
+    flex-direction: row;
+  }
 }

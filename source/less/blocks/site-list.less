@@ -11,3 +11,23 @@
 .site-list__link {
   color: @main-blue;
 }
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+  }
+  .site-list__item {
+    margin: 0 18px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .site-list__link {
+    color: #ffffff;
+  }
+}

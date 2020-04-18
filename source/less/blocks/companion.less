@@ -1,7 +1,20 @@
 .companion {
   background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.companion__image-block {
+  position: relative;
+  line-height: 0;
+}
+.companion__desc {
+  position: relative;
+  padding: 15px 20px 22px 20px;
 }
 .companion__level {
+  position: absolute;
+  top: 17px;
+  left: 17px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
@@ -14,13 +27,34 @@
 }
 .companion__countries {
   .list-reset();
-}
-.companion__name {
-  font-size: 21px;
-  line-height: 21px;
-  color: @main-blue;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .companion__country-flag {
+  margin: 0 9.5px;
   font-size: 0;
   line-height: 0;
+}
+.companion__name {
+  margin: 12px 0;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: @main-blue;
+}
+@media (min-width: @tablet-width) {
+  .companion {
+    width: 285px;
+  }
+  .companion__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+@media (min-width: @desktop-width) {
+
 }

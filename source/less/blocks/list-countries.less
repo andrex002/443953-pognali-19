@@ -1,0 +1,78 @@
+.list-countries__table {
+  .centering(@width: 220px, @padding: 0);
+  border-collapse: collapse;
+}
+.list-countries__letter {
+  background-color: #ffffff;
+  border: 1px solid #cbced9;
+  &--active {
+    background-color: @main-blue;
+    color: #ffffff;
+  }
+}
+.list-countries__block {
+  .list-reset();
+  .centering(@width: 220px, @padding: 0);
+}
+.list-countries__initial-letter {
+  display: none;
+  &:first-child {
+    display: block;
+  }
+}
+.list-countries__btn-close {
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #161c35;
+  background-color: #d6daed;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+@media (min-width: @tablet-width) {
+  .list-countries {
+    display: flex;
+  }
+  .list-countries__table {
+    width: 390px;
+    margin: 0;
+    margin-right: 55px;
+  }
+  .list-countries__letter {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    color: fade(#192144, 20%);
+    background-color: transparent;
+    border: 0;
+    &--active {
+      color: #192144;
+    }
+  }
+  .list-countries__block {
+    width: auto;
+    margin: 0;
+  }
+  .list-countries__btn-close {
+    padding: 35px;
+    font-size: 20px;
+    color: @main-blue;
+  }
+}
+@media (min-width: @desktop-width) {
+  .list-countries__table {
+    display: none;
+  }
+  .list-countries__block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .list-countries__initial-letter {
+    display: block;
+  }
+}

@@ -1,8 +1,12 @@
 .user-list {
   .list-reset();
+  flex-grow: 1;
 }
 .user-list__login {
   display: inline-block;
+  width: 189px;
+  padding: 5px 30px;
+  box-sizing: border-box;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -10,4 +14,10 @@
   text-align: center;
   color: #161c35;
   background-color: @yellow-btn;
+  border-radius: 25px;
+}
+@media (min-width: @tablet-width) {
+  .user-list__login {
+    min-width: 189px;
+  }
 }

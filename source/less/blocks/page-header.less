@@ -4,3 +4,34 @@
 .page-header__wrapper {
   .centering();
 }
+.page-header .contacts-block {
+  display: none;
+}
+.page-header .user-list__login {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+    position: relative;
+  }
+  .page-header .user-block {
+    display: block;
+  }
+}
+@media (min-width: @desktop-width) {
+  .page-header {
+    background-color: #161c34;
+  }
+  .page-header__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .page-header .contacts-block {
+    display: flex;
+  }
+  .page-header .user-block {
+    display: flex;
+  }
+}

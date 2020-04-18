@@ -1,11 +1,60 @@
 .add-plan {
+  padding-bottom: 30px;
+  margin-top: -30px;
   background-color: #d4d9eb;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 .add-plan__wrapper {
   .centering();
+}
+.add-plan__inner {
+  padding: 5px 0 34px 0;
+}
+.add-plan__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
 }
 .add-plan__title {
   font-size: 24px;
   line-height: 24px;
   color: @main-blue;
+}
+@media (min-width: @tablet-width) {
+  .add-plan {
+    padding-bottom: 60px;
+  }
+  .add-plan__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+  }
+  .add-plan__inner {
+    padding: 23px 35px;
+  }
+  .add-plan__title {
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .add-plan {
+    margin-top: -60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+  .add-plan__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .add-plan__inner {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 72px;
+  }
+  .add-plan__title {
+    margin-left: 70px;
+  }
+  .add-plan__list-steps.list-steps {
+    display: none;
+  }
 }
