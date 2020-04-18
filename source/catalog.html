@@ -1,506 +1,510 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-   <meta charset="UTF-8">
-   <title>Погнали: Попутчики</title>
+  <meta charset="UTF-8">
+  <title>Погнали: Попутчики</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <header class="page-header">
-      <div class="page-header__wrapper">
-         <nav class="main-nav">
-            <div class="main-nav__top">
-               <a class="page-header__logo logo" href="index.html">
-                  <img class="logo__image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса Погнали">
-               </a>
-               <button class="main-nav__toogle" type="button">Открыть меню</button>
-            </div>
-            <div class="main-nav__content">
-               <ul class="main-nav__site-list site-list">
-                  <li class="site-list__item">
-                     <a href="#" class="site-list__link">О сервисе</a>
-                  </li>
-                  <li class="site-list__item">
-                     <a href="form.html" class="site-list__link">Направления</a>
-                  </li>
-                  <li class="site-list__item">
-                     <a href="#" class="site-list__link">Попутчики</a>
-                  </li>
-               </ul>
-               <ul class="main-nav__user-list user-list">
-                  <li class="user-list__item">
-                     <a class="user-list__login" href="#">Авторизация</a>
-                  </li>
-               </ul>
-               <ul class="main-nav__contacts contacts">
-                  <li class="contacts__item">
-                     <a class="contacts__tel" href="tel:88005558628">8 800 555-86-28</a>
-                  </li>
-                  <li class="contacts__item">
-                     <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-                  </li>
-               </ul>
-               <ul class="main-nav__socials socials">
-                  <li class="socials__item">
-                     <a class="socials__link" href="#">
-                        facebook
-                        <img src="https://via.placeholder.com/11x21" width="11" height="21" alt="Иконка facebook">
-                     </a>
-                  </li>
-                  <li class="socials__item">
-                     <a class="socials__link" href="#">
-                        в контакте
-                        <img src="https://via.placeholder.com/23x12" width="23" height="12" alt="Иконка в контакте">
-                     </a>
-                  </li>
-                  <li class="socials__item">
-                     <a class="socials__link" href="#">
-                        instagram
-                        <img src="https://via.placeholder.com/18x18" width="18" height="18" alt="Иконка instagram">
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </div>
-   </header>
-   <main class="page-main">
-      <section class="main-title">
-         <div class="main-title__wrapper">
-            <h1 class="page-main__title">Попутчики</h1>
-         </div>
-      </section>
-      <section class="filter-country">
-         <div class="filter-country__wrapper">
-            <div class="filter-country__top">
-               <h2 class="filter-country__title">Фильтрация по странам</h2>
-               <button class="filter-country__toogle">Открыть фильтр по странам</button>
-            </div>
-            <div class="filter-country__dropdown-block dropdown-block">
-               <ul class="dropdown-block__countries-list">
-                  <li class="dropdown-block__item dropdown-block__item--active">Европа</li>
-                  <li class="dropdown-block__item">Азия</li>
-                  <li class="dropdown-block__item">Америка</li>
-                  <li class="dropdown-block__item">Острова</li>
-               </ul>
-               <table class="dropdown-block__table">
-                  <tr class="dropdown-block__table-row">
-                     <td class="dropdown-block__letter dropdown-block__letter--active">А</td>
-                     <td class="dropdown-block__letter">Б</td>
-                     <td class="dropdown-block__letter">В</td>
-                     <td class="dropdown-block__letter">Г</td>
-                     <td class="dropdown-block__letter">Д</td>
-                  </tr>
-                  <tr class="dropdown-block__table-row">
-                     <td class="dropdown-block__letter">Е</td>
-                     <td class="dropdown-block__letter">З</td>
-                     <td class="dropdown-block__letter">И</td>
-                     <td class="dropdown-block__letter">К</td>
-                     <td class="dropdown-block__letter">Л</td>
-                  </tr>
-                  <tr class="dropdown-block__table-row">
-                     <td class="dropdown-block__letter">М</td>
-                     <td class="dropdown-block__letter">Н</td>
-                     <td class="dropdown-block__letter">О</td>
-                     <td class="dropdown-block__letter">П</td>
-                     <td class="dropdown-block__letter">Р</td>
-                  </tr>
-                  <tr class="dropdown-block__table-row">
-                     <td class="dropdown-block__letter">С</td>
-                     <td class="dropdown-block__letter">Т</td>
-                     <td class="dropdown-block__letter">У</td>
-                     <td class="dropdown-block__letter">Ф</td>
-                     <td class="dropdown-block__letter">Х</td>
-                  </tr>
-                  <tr class="dropdown-block__table-row">
-                     <td class="dropdown-block__letter">Ч</td>
-                     <td class="dropdown-block__letter">Ш</td>
-                     <td class="dropdown-block__letter">Э</td>
-                     <td class="dropdown-block__letter">Ю</td>
-                     <td class="dropdown-block__letter">Я</td>
-                  </tr>
-               </table>
-               <ul class="dropdown-block__list-countries">
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="europe/australia">Австралия</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Австрия</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Азербайджан</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Албания</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Алжир</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Ангола</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Андорра</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Антигуа и Барбуда</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Аргентина</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Армения</a>
-                  </li>
-                  <li class="dropdown-block__country">
-                     <a class="dropdown-block__country-link" href="">Афганистан</a>
-                  </li>
-               </ul>
-               <button class="dropdown-block__btn-close" type="button">Свернуть</button>
-            </div>
-         </div>
-      </section>
-      <article class="catalog">
-         <div class="catalog__wrapper">
-            <h2 class="visually-hidden">Поиск идеального попутчика</h2>
-            <section class="catalog__filter filter-block">
-               <form class="filter-block__form" action="https://echo.htmlacademy.ru" method="post">
-                  <h2 class="filter-block__title">Подберите идеального попутчика</h2>
-                  <fieldset class="filter-block__hobby filter">
-                     <legend class="filter__title">Хобби</legend>
-                     <ul class="filter__list">
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-gym" name="hobby" value="gym">
-                           <label for="filter-gym" class="filter__label">Спортзал</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-hookah" name="hobby" value="hookah">
-                           <label for="filter-hookah" class="filter__label">Кальян</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-sofa" name="hobby" value="sofa">
-                           <label for="filter-sofa" class="filter__label">Диван</label>
-                        </li>
-                     </ul>
-                  </fieldset>
-                  <fieldset class="filter-block__music filter">
-                     <legend class="filter__title">Музыка</legend>
-                     <ul class="filter__list">
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-hardrock" name="music" value="hardrock" checked>
-                           <label for="filter-hardrock" class="filter__label">Тяжелый рок</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-russianrap" name="music" value="russianrap">
-                           <label for="filter-russianrap" class="filter__label">Русский рэп</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-eurodance" name="music" value="eurodance">
-                           <label for="filter-eurodance" class="filter__label">Евроденс</label>
-                        </li>
-                     </ul>
-                  </fieldset>
-                  <fieldset class="filter-block__food filter">
-                     <legend class="filter__title">Еда</legend>
-                     <ul class="filter__list">
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-meat_eater" name="food" value="meat-eater">
-                           <label for="filter-meat_eater" class="filter__label">Мясоед</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-pp" name="food" value="pp">
-                           <label for="filter-pp" class="filter__label">Сидит на ПП</label>
-                        </li>
-                        <li class="filter__item">
-                           <input class="filter__checkbox" type="checkbox" id="filter-vegetarian" name="food" value="vegetarian">
-                           <label for="filter-vegetarian" class="filter__label">Веган-сыроед</label>
-                        </li>
-                     </ul>
-                  </fieldset>
-                  <fieldset class="filter-block__transport filter">
-                     <legend class="filter__title">Транспорт</legend>
-                     <ul class="filter__list transport-list">
-                        <li class="transport-list__item">
-                           <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
-                           <label class="transport-list__label" for="plane" aria-label="На самолете">
-                              <img src="https://via.placeholder.com/14x16" width="14" height="16" alt="Иконка самолета">
-                           </label>
-                        </li>
-                        <li class="transport-list__item">
-                           <input class="visually-hidden" type="checkbox" id="bus" name="transport" value="bus" checked>
-                           <label class="transport-list__label" for="bus" aria-label="На автобусе">
-                              <img src="https://via.placeholder.com/13x16" width="13" height="16" alt="Иконка автобуса">
-                           </label>
-                        </li>
-                        <li class="transport-list__item">
-                           <input class="visually-hidden" type="checkbox" id="bike"  name="transport" value="bike">
-                           <label class="transport-list__label" for="bike" aria-label="На велосипеде">
-                              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="На велосипеде">
-                           </label>
-                        </li>
-                        <li class="transport-list__item">
-                           <input class="visually-hidden" type="checkbox" id="run"  name="transport" value="run" checked>
-                           <label class="transport-list__label" for="run" aria-label="Пешком">
-                              <img src="https://via.placeholder.com/15x17" width="15" height="17" alt="Пешком">
-                           </label>
-                           <img src="https://via.placeholder.com/15x17" width="15" height="17" alt="Пешком">
-                        </li>
-                     </ul>
-                  </fieldset>
-                  <fieldset class="filter-block__level filter">
-                     <legend class="filter__title">Левел</legend>
-                     <div class="filter__level-value">
-                        <label class="filter__level-value">
-                           <input class="filter__level-min" type="number" name="min-level" value="30">
-                        </label>
-                        <label class="filter__level-value">
-                           <input class="filter__level-max" type="number" name="max-level" value="100">
-                        </label>
-                     </div>
-                     <div class="filter__level-controls">
-                        <div class="filter__level-scale">
-                           <div class="filter__level-bar"></div>
-                        </div>
-                        <div class="filter__level-toogle filter__level-toogle--min"></div>
-                        <div class="filter__level-toogle filter__level-toogle--max"></div>
-                     </div>
-                  </fieldset>
-                  <button class="filter__btn">Показать</button>
-               </form>
-            </section>
-            <section class="travelmates">
-               <h2 class="visually-hidden">Карточки попутчиков</h2>
-               <ul class="travelmates__list">
-                  <li class="travelmates__item card">
-                     <h3 class="card__title">
-                        <a href="profile/Tanya_Firsova.html">Таня Фирсова</a>
-                     </h3>
-                     <div class="card__photo-block">
-                        <a class="card__photo-link" href="profile/Tanya_Firsova.html">
-                           <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Таня Фирсова">
-                        </a>
-                     </div>
-                     <p class="card__likes">1,5 М</p>
-                     <ul class="card__tags tags-travelmates">
-                        <li class="tags-travelmates__item">#30Ж</li>
-                        <li class="tags-travelmates__item">#ПП</li>
-                        <li class="tags-travelmates__item">#Фитнес</li>
-                        <li class="tags-travelmates__item">#пляж</li>
-                        <li class="tags-travelmates__item">#авокадо</li>
-                        <li class="tags-travelmates__item">#смузи</li>
-                     </ul>
-                     <div class="card__countries-block">
-                        <h4 class="card__subtitle">хочет посетить:</h4>
-                        <ul class="card__countries-list">
-                           <li class="card__country card__country--sri-lanka">Шри-Ланка</li>
-                           <li class="card__country card__country--tailand">Тайланд</li>
-                           <li class="card__country card__country--seychelles">Сейшелы</li>
-                        </ul>
-                     </div>
-                     <div class="card__transports-block">
-                        <h4 class="card__subtitle">транспорт:</h4>
-                        <ul class="card__transports transports-travelmates">
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="card__level-block">
-                        <h4 class="card__subtitle">левел</h4>
-                        <div class="card__level">99</div>
-                     </div>
-                     <a href="response-page.html" class="card__btn">Позвать!</a>
-                  </li>
-                  <li class="travelmates__item card">
-                     <h3 class="card__title">
-                        <a href="profile/Petya_Demin.html">Петя Демин</a>
-                     </h3>
-                     <div class="card__photo-block">
-                        <a class="card__photo-link" href="profile/Petya_Demin.html">
-                           <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Петя Демин">
-                        </a>
-                     </div>
-                     <p class="card__likes">1500</p>
-                     <ul class="card__tags tags-travelmates">
-                        <li class="tags-travelmates__item">#бургер</li>
-                        <li class="tags-travelmates__item">#бар</li>
-                        <li class="tags-travelmates__item">#футбол</li>
-                        <li class="tags-travelmates__item">#концерт</li>
-                        <li class="tags-travelmates__item">#крафт</li>
-                     </ul>
-                     <div class="card__countries-block">
-                        <h4 class="card__subtitle">хочет посетить:</h4>
-                        <ul class="card__countries-list">
-                           <li class="card__country card__country--belgium">Бельгия</li>
-                           <li class="card__country card__country--chech">Чехия</li>
-                        </ul>
-                     </div>
-                     <div class="card__transports-block">
-                        <h4 class="card__subtitle">транспорт:</h4>
-                        <ul class="card__transports transports-travelmates">
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
-                           </li>
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
-                           </li>
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="card__level-block">
-                        <h4 class="card__subtitle">левел</h4>
-                        <div class="card__level">80</div>
-                     </div>
-                     <a href="response-page.html" class="card__btn">Позвать!</a>
-                  </li>
-                  <li class="travelmates__item card">
-                     <h3 class="card__title">
-                        <a href="profile/Mark_Smolov.html">Марк Смолов</a>
-                     </h3>
-                     <div class="card__photo-block">
-                        <a class="card__photo-link" href="profile/Mark_Smolov.html">
-                           <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Марк Смолов">
-                        </a>
-                     </div>
-                     <p class="card__likes">170</p>
-                     <ul class="card__tags tags-travelmates">
-                        <li class="tags-travelmates__item">#рэп</li>
-                        <li class="tags-travelmates__item">#тату</li>
-                        <li class="tags-travelmates__item">#хайпбист</li>
-                        <li class="tags-travelmates__item">#кроссовки</li>
-                        <li class="tags-travelmates__item">#суприм</li>
-                     </ul>
-                     <div class="card__countries-block">
-                        <h4 class="card__subtitle">хочет посетить:</h4>
-                        <ul class="card__countries-list">
-                           <li class="card__country card__country--usa">Сша</li>
-                           <li class="card__country card__country--australia">Австрия</li>
-                           <li class="card__country card__country--dominic">Доминика</li>
-                        </ul>
-                     </div>
-                     <div class="card__transports-block">
-                        <h4 class="card__subtitle">транспорт:</h4>
-                        <ul class="card__transports transports-travelmates">
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
-                           </li>
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="card__level-block">
-                        <h4 class="card__subtitle">левел</h4>
-                        <div class="card__level">25</div>
-                     </div>
-                     <a href="response-page.html" class="card__btn">Позвать!</a>
-                  </li>
-                  <li class="travelmates__item card">
-                     <h3 class="card__title">
-                        <a href="profile/Larisa_Rogovya.html">Лариса Роговая</a>
-                     </h3>
-                     <div class="card__photo-block">
-                        <a class="card__photo-link" href="profile/Larisa_Rogovya.html">
-                           <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Лариса Роговая">
-                        </a>
-                     </div>
-                     <p class="card__likes">23</p>
-                     <ul class="card__tags tags-travelmates">
-                        <li class="tags-travelmates__item">#образование</li>
-                        <li class="tags-travelmates__item">#карьера</li>
-                        <li class="tags-travelmates__item">#учеба</li>
-                        <li class="tags-travelmates__item">#линкедин</li>
-                     </ul>
-                     <div class="card__countries-block">
-                        <h4 class="card__subtitle">хочет посетить:</h4>
-                        <ul class="card__countries-list">
-                           <li class="card__country card__country--great-britain">Великобритания</li>
-                           <li class="card__country card__country--germany">Германия</li>
-                        </ul>
-                     </div>
-                     <div class="card__transports-block">
-                        <h4 class="card__subtitle">транспорт:</h4>
-                        <ul class="card__transports transports-travelmates">
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
-                           </li>
-                           <li class="transports-travelmates__item transports-travelmates__item--active">
-                              <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
-                           </li>
-                           <li class="transports-travelmates__item">
-                              <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="card__level-block">
-                        <h4 class="card__subtitle">левел</h4>
-                        <div class="card__level">50</div>
-                     </div>
-                     <a href="response-page.html" class="card__btn">Позвать!</a>
-                  </li>
-               </ul>
-               <a class="travelmates__show-more" href="travelmates.html">Показать еще</a>
-            </section>
-            <section class="pagination">
-               <h2 class="visually-hidden">Пагинация</h2>
-               <a href="#" class="pagination__btn pagination__btn--prev">Назад</a>
-               <a href="#" class="pagination__btn pagination__btn--next">Вперед</a>
-            </section>
-         </div>
-      </article>
-   </main>
-   <footer class="page-footer">
-      <div class="page-footer__wrapper">
-         <a class="page-footer__logo logo">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <nav class="main-nav">
+        <div class="main-nav__top">
+          <a class="page-header__logo logo" href="index.html">
             <img class="logo__image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса Погнали">
-         </a>
-         <ul class="page-footer__socials socials">
+          </a>
+          <button class="main-nav__toogle" type="button">Открыть меню</button>
+        </div>
+        <div class="main-nav__content">
+          <ul class="main-nav__site-list site-list">
+            <li class="site-list__item">
+              <a href="#" class="site-list__link">О сервисе</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html" class="site-list__link">Направления</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#" class="site-list__link">Попутчики</a>
+            </li>
+          </ul>
+          <ul class="main-nav__user-list user-list">
+            <li class="user-list__item">
+              <a class="user-list__login" href="#">Авторизация</a>
+            </li>
+          </ul>
+          <ul class="main-nav__contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__tel" href="tel:88005558628">8 800 555-86-28</a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <ul class="main-nav__socials socials">
             <li class="socials__item">
-               <a class="socials__link" href="#">
-                  facebook
-                  <img src="https://via.placeholder.com/11x21" width="11" height="21" alt="Иконка facebook">
-               </a>
+              <a class="socials__link" href="#">
+                facebook
+                <img src="https://via.placeholder.com/11x21" width="11" height="21" alt="Иконка facebook">
+              </a>
             </li>
             <li class="socials__item">
-               <a class="socials__link" href="#">
-                  в контакте
-                  <img src="https://via.placeholder.com/23x12" width="23" height="12" alt="Иконка в контакте">
-               </a>
+              <a class="socials__link" href="#">
+                в контакте
+                <img src="https://via.placeholder.com/23x12" width="23" height="12" alt="Иконка в контакте">
+              </a>
             </li>
             <li class="socials__item">
-               <a class="socials__link" href="#">
-                  instagram
-                  <img src="https://via.placeholder.com/18x18" width="18" height="18" alt="Иконка instagram"></a>
+              <a class="socials__link" href="#">
+                instagram
+                <img src="https://via.placeholder.com/18x18" width="18" height="18" alt="Иконка instagram">
+              </a>
             </li>
-         </ul>
-         <div class="page-footer__copyright copyright">
-            <p class="copyright__text">Разработано</p>
-            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-               <img class="copyright__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy">
-            </a>
-         </div>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <section class="main-title">
+      <div class="main-title__wrapper">
+        <h1 class="main-title__text">Попутчики</h1>
       </div>
-   </footer>
+    </section>
+    <section class="filter-country">
+      <div class="filter-country__wrapper">
+        <div class="filter-country__top">
+          <h2 class="filter-country__title">Фильтрация по странам</h2>
+          <button class="filter-country__toogle">Открыть фильтр по странам</button>
+        </div>
+        <div class="filter-country__dropdown-block dropdown-block">
+          <ul class="dropdown-block__countries-list">
+            <li class="dropdown-block__item dropdown-block__item--active">Европа</li>
+            <li class="dropdown-block__item">Азия</li>
+            <li class="dropdown-block__item">Америка</li>
+            <li class="dropdown-block__item">Острова</li>
+          </ul>
+          <table class="dropdown-block__table">
+            <tr class="dropdown-block__table-row">
+              <td class="dropdown-block__letter dropdown-block__letter--active">А</td>
+              <td class="dropdown-block__letter">Б</td>
+              <td class="dropdown-block__letter">В</td>
+              <td class="dropdown-block__letter">Г</td>
+              <td class="dropdown-block__letter">Д</td>
+            </tr>
+            <tr class="dropdown-block__table-row">
+              <td class="dropdown-block__letter">Е</td>
+              <td class="dropdown-block__letter">З</td>
+              <td class="dropdown-block__letter">И</td>
+              <td class="dropdown-block__letter">К</td>
+              <td class="dropdown-block__letter">Л</td>
+            </tr>
+            <tr class="dropdown-block__table-row">
+              <td class="dropdown-block__letter">М</td>
+              <td class="dropdown-block__letter">Н</td>
+              <td class="dropdown-block__letter">О</td>
+              <td class="dropdown-block__letter">П</td>
+              <td class="dropdown-block__letter">Р</td>
+            </tr>
+            <tr class="dropdown-block__table-row">
+              <td class="dropdown-block__letter">С</td>
+              <td class="dropdown-block__letter">Т</td>
+              <td class="dropdown-block__letter">У</td>
+              <td class="dropdown-block__letter">Ф</td>
+              <td class="dropdown-block__letter">Х</td>
+            </tr>
+            <tr class="dropdown-block__table-row">
+              <td class="dropdown-block__letter">Ч</td>
+              <td class="dropdown-block__letter">Ш</td>
+              <td class="dropdown-block__letter">Э</td>
+              <td class="dropdown-block__letter">Ю</td>
+              <td class="dropdown-block__letter">Я</td>
+            </tr>
+          </table>
+          <ul class="dropdown-block__list-countries">
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="europe/australia">Австралия</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Австрия</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Азербайджан</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Албания</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Алжир</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Ангола</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Андорра</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Антигуа и Барбуда</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Аргентина</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Армения</a>
+            </li>
+            <li class="dropdown-block__country">
+              <a class="dropdown-block__country-link" href="">Афганистан</a>
+            </li>
+          </ul>
+          <button class="dropdown-block__btn-close" type="button">Свернуть</button>
+        </div>
+      </div>
+    </section>
+    <article class="catalog">
+      <div class="catalog__wrapper">
+        <h2 class="visually-hidden">Поиск идеального попутчика</h2>
+        <section class="catalog__filter filter-block">
+          <form class="filter-block__form" action="https://echo.htmlacademy.ru" method="post">
+            <h2 class="filter-block__title">Подберите идеального попутчика</h2>
+            <fieldset class="filter-block__hobby filter">
+              <legend class="filter__title">Хобби</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-gym" name="hobby" value="gym">
+                  <label for="filter-gym" class="filter__label">Спортзал</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-hookah" name="hobby" value="hookah">
+                  <label for="filter-hookah" class="filter__label">Кальян</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-sofa" name="hobby" value="sofa">
+                  <label for="filter-sofa" class="filter__label">Диван</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-block__music filter">
+              <legend class="filter__title">Музыка</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-hardrock" name="music" value="hardrock" checked>
+                  <label for="filter-hardrock" class="filter__label">Тяжелый рок</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-russianrap" name="music" value="russianrap">
+                  <label for="filter-russianrap" class="filter__label">Русский рэп</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-eurodance" name="music" value="eurodance">
+                  <label for="filter-eurodance" class="filter__label">Евроденс</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-block__food filter">
+              <legend class="filter__title">Еда</legend>
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-meat_eater" name="food" value="meat-eater">
+                  <label for="filter-meat_eater" class="filter__label">Мясоед</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-pp" name="food" value="pp">
+                  <label for="filter-pp" class="filter__label">Сидит на ПП</label>
+                </li>
+                <li class="filter__item">
+                  <input class="filter__checkbox" type="checkbox" id="filter-vegetarian" name="food" value="vegetarian">
+                  <label for="filter-vegetarian" class="filter__label">Веган-сыроед</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-block__transport filter">
+              <legend class="filter__title">Транспорт</legend>
+              <ul class="filter__list transport-list">
+                <li class="transport-list__item">
+                  <input class="visually-hidden" type="checkbox" id="plane" name="transport" value="plane" checked>
+                  <label class="transport-list__label" for="plane" aria-label="На самолете">
+                    <img src="https://via.placeholder.com/14x16" width="14" height="16" alt="Иконка самолета">
+                  </label>
+                </li>
+                <li class="transport-list__item">
+                  <input class="visually-hidden" type="checkbox" id="bus" name="transport" value="bus" checked>
+                  <label class="transport-list__label" for="bus" aria-label="На автобусе">
+                    <img src="https://via.placeholder.com/13x16" width="13" height="16" alt="Иконка автобуса">
+                  </label>
+                </li>
+                <li class="transport-list__item">
+                  <input class="visually-hidden" type="checkbox" id="bike" name="transport" value="bike">
+                  <label class="transport-list__label" for="bike" aria-label="На велосипеде">
+                    <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="На велосипеде">
+                  </label>
+                </li>
+                <li class="transport-list__item">
+                  <input class="visually-hidden" type="checkbox" id="run" name="transport" value="run" checked>
+                  <label class="transport-list__label" for="run" aria-label="Пешком">
+                    <img src="https://via.placeholder.com/15x17" width="15" height="17" alt="Пешком">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-block__level filter">
+              <legend class="filter__title">Левел</legend>
+              <div class="filter__level">
+                <label class="filter__level-label">
+                  <input class="filter__level-value filter__level-value--min" type="number" name="min-level" value="30">
+                </label>
+                <label class="filter__level-label">
+                  <input class="filter__level-value filter__level-value--max" type="number" name="max-level" value="100">
+                </label>
+              </div>
+              <div class="filter__level-controls">
+                <div class="filter__level-scale">
+                  <div class="filter__level-bar"></div>
+                </div>
+                <div class="filter__level-toogle filter__level-toogle--min"></div>
+                <div class="filter__level-toogle filter__level-toogle--max"></div>
+              </div>
+            </fieldset>
+            <button class="filter__btn">Показать</button>
+          </form>
+        </section>
+        <section class="travelmates">
+          <h2 class="visually-hidden">Карточки попутчиков</h2>
+          <ul class="travelmates__list">
+            <li class="travelmates__item card">
+              <h3 class="card__title">
+                <a href="profile/Tanya_Firsova.html">Таня Фирсова</a>
+              </h3>
+              <div class="card__photo-block">
+                <a class="card__photo-link" href="profile/Tanya_Firsova.html">
+                  <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Таня Фирсова">
+                </a>
+              </div>
+              <p class="card__likes">1,5 М</p>
+              <ul class="card__tags tags-travelmates">
+                <li class="tags-travelmates__item">#30Ж</li>
+                <li class="tags-travelmates__item">#ПП</li>
+                <li class="tags-travelmates__item">#Фитнес</li>
+                <li class="tags-travelmates__item">#пляж</li>
+                <li class="tags-travelmates__item">#авокадо</li>
+                <li class="tags-travelmates__item">#смузи</li>
+              </ul>
+              <div class="card__countries-block">
+                <h4 class="card__subtitle">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__country card__country--sri-lanka">Шри-Ланка</li>
+                  <li class="card__country card__country--tailand">Тайланд</li>
+                  <li class="card__country card__country--seychelles">Сейшелы</li>
+                </ul>
+              </div>
+              <div class="card__transports-block">
+                <h4 class="card__subtitle">транспорт:</h4>
+                <ul class="card__transports transports-travelmates">
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="card__level-block">
+                <h4 class="card__subtitle">левел:</h4>
+                <div class="card__level">99</div>
+              </div>
+              <a href="response-page.html" class="card__btn">Позвать!</a>
+            </li>
+            <li class="travelmates__item card">
+              <h3 class="card__title">
+                <a href="profile/Petya_Demin.html">Петя Демин</a>
+              </h3>
+              <div class="card__photo-block">
+                <a class="card__photo-link" href="profile/Petya_Demin.html">
+                  <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Петя Демин">
+                </a>
+              </div>
+              <p class="card__likes">1500</p>
+              <ul class="card__tags tags-travelmates">
+                <li class="tags-travelmates__item">#бургер</li>
+                <li class="tags-travelmates__item">#бар</li>
+                <li class="tags-travelmates__item">#футбол</li>
+                <li class="tags-travelmates__item">#концерт</li>
+                <li class="tags-travelmates__item">#крафт</li>
+              </ul>
+              <div class="card__countries-block">
+                <h4 class="card__subtitle">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__country card__country--belgium">Бельгия</li>
+                  <li class="card__country card__country--chech">Чехия</li>
+                </ul>
+              </div>
+              <div class="card__transports-block">
+                <h4 class="card__subtitle">транспорт:</h4>
+                <ul class="card__transports transports-travelmates">
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
+                  </li>
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
+                  </li>
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="card__level-block">
+                <h4 class="card__subtitle">левел:</h4>
+                <div class="card__level">80</div>
+              </div>
+              <a href="response-page.html" class="card__btn">Позвать!</a>
+            </li>
+            <li class="travelmates__item card">
+              <h3 class="card__title">
+                <a href="profile/Mark_Smolov.html">Марк Смолов</a>
+              </h3>
+              <div class="card__photo-block">
+                <a class="card__photo-link" href="profile/Mark_Smolov.html">
+                  <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Марк Смолов">
+                </a>
+              </div>
+              <p class="card__likes">170</p>
+              <ul class="card__tags tags-travelmates">
+                <li class="tags-travelmates__item">#рэп</li>
+                <li class="tags-travelmates__item">#тату</li>
+                <li class="tags-travelmates__item">#хайпбист</li>
+                <li class="tags-travelmates__item">#кроссовки</li>
+                <li class="tags-travelmates__item">#суприм</li>
+              </ul>
+              <div class="card__countries-block">
+                <h4 class="card__subtitle">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__country card__country--usa">Сша</li>
+                  <li class="card__country card__country--australia">Австрия</li>
+                  <li class="card__country card__country--dominic">Доминика</li>
+                </ul>
+              </div>
+              <div class="card__transports-block">
+                <h4 class="card__subtitle">транспорт:</h4>
+                <ul class="card__transports transports-travelmates">
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
+                  </li>
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="card__level-block">
+                <h4 class="card__subtitle">левел:</h4>
+                <div class="card__level">25</div>
+              </div>
+              <a href="response-page.html" class="card__btn">Позвать!</a>
+            </li>
+            <li class="travelmates__item card">
+              <h3 class="card__title">
+                <a href="profile/Larisa_Rogovya.html">Лариса Роговая</a>
+              </h3>
+              <div class="card__photo-block">
+                <a class="card__photo-link" href="profile/Larisa_Rogovya.html">
+                  <img class="card__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Аватар Лариса Роговая">
+                </a>
+              </div>
+              <p class="card__likes">23</p>
+              <ul class="card__tags tags-travelmates">
+                <li class="tags-travelmates__item">#образование</li>
+                <li class="tags-travelmates__item">#карьера</li>
+                <li class="tags-travelmates__item">#учеба</li>
+                <li class="tags-travelmates__item">#линкедин</li>
+              </ul>
+              <div class="card__countries-block">
+                <h4 class="card__subtitle">хочет посетить:</h4>
+                <ul class="card__countries-list">
+                  <li class="card__country card__country--great-britain">Великобритания</li>
+                  <li class="card__country card__country--germany">Германия</li>
+                </ul>
+              </div>
+              <div class="card__transports-block">
+                <h4 class="card__subtitle">транспорт:</h4>
+                <ul class="card__transports transports-travelmates">
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/19x21" width="19" height="21" alt="На самолете">
+                  </li>
+                  <li class="transports-travelmates__item transports-travelmates__item--active">
+                    <img src="https://via.placeholder.com/17x21" width="17" height="21" alt="На автобусе">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/24x21" width="24" height="21" alt="На велосипеде">
+                  </li>
+                  <li class="transports-travelmates__item">
+                    <img src="https://via.placeholder.com/20x21" width="20" height="21" alt="Пешком">
+                  </li>
+                </ul>
+              </div>
+              <div class="card__level-block">
+                <h4 class="card__subtitle">левел:</h4>
+                <div class="card__level">50</div>
+              </div>
+              <a href="response-page.html" class="card__btn">Позвать!</a>
+            </li>
+          </ul>
+          <a class="travelmates__show-more" href="travelmates.html">Показать еще</a>
+        </section>
+        <section class="pagination">
+          <h2 class="visually-hidden">Пагинация</h2>
+          <a href="#" class="pagination__btn pagination__btn--prev">Назад</a>
+          <a href="#" class="pagination__btn pagination__btn--next">Вперед</a>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo logo">
+        <img class="logo__image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса Погнали">
+      </a>
+      <ul class="page-footer__socials socials">
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            facebook
+            <img src="https://via.placeholder.com/11x21" width="11" height="21" alt="Иконка facebook">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            в контакте
+            <img src="https://via.placeholder.com/23x12" width="23" height="12" alt="Иконка в контакте">
+          </a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link" href="#">
+            instagram
+            <img src="https://via.placeholder.com/18x18" width="18" height="18" alt="Иконка instagram"></a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип htmlacademy">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>

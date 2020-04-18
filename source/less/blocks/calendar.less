@@ -1,0 +1,34 @@
+.calendar__month-year {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @main-blue;
+  text-align: center;
+}
+.calendar__table {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-collapse: collapse;
+}
+.calendar__weekday {
+  font-weight: 400;
+}
+.calendar__weekday--weekend {
+  color: #ff5c23;
+}
+.calendar__day {
+  border: 1px solid #cbced9;
+  background-color: #edeff6;
+}
+.calendar__day--disabled {
+  background-color: #ffffff;
+  color: fade(@base-text-color, 30%);
+}
+.calendar__day--checked {
+  background-color: @main-blue;
+  color: #ffffff;
+}
+.calendar__day--current {
+  border: 2px solid #ff5c23;
+}
