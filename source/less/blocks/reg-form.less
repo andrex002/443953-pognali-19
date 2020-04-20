@@ -1,3 +1,6 @@
+.reg-form {
+  display: flex;
+}
 .reg-form__input {
   font-size: 18px;
   line-height: 18px;
@@ -13,4 +16,9 @@
   background-color: @yellow-btn;
   border: none;
   border-radius: 10px;
+}
+@media (min-width: @tablet-width) {
+  .reg-form__input {
+    flex-grow: 1;
+  }
 }

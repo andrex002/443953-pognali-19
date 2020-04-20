@@ -1,7 +1,26 @@
 .quote {
+  width: 170px;
+  margin-left: 25px;
+  margin-right: 25px;
   font-weight: 300;
   color: #ffffff;
 }
 .quote__autor {
   font-weight: 700;
+  font-style: normal;
+}
+@media (min-width: @tablet-width) {
+  .quote {
+    width: 290px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .quote__text {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  .quote__autor {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }

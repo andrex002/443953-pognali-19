@@ -1,26 +1,44 @@
 .step {
+  padding-bottom: 22px;
+  margin: 10px 0;
   background-color: #ffffff;
   border-radius: 10px;
+}
+.step__inner {
+  padding: 22px 25px;
 }
 .step__subtitle {
   font-size: 20px;
   line-height: 20px;
   color: @main-blue;
 }
-.step__label {
+.step__list-steps.list-steps {
+  display: none;
+}
+.step__input-number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   line-height: 16px;
   font-weight: 500;
   color: @main-blue;
   text-transform: uppercase;
 }
-.step__label span {
+.step__measure-unit {
   color: fade(@main-blue, 30%);
 }
 .step__checkbox-label {
   font-size: 15px;
   line-height: 15px;
 }
+.step__btn-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .step__btn {
+  display: inline-block;
+  width: 230px;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -31,11 +49,14 @@
   border: 0;
   border-radius: 20px;
   &--back {
+    width: auto;
     background-color: transparent;
     border-radius: 0;
   }
 }
 .step__add-country {
+  width: 100%;
+  padding: 12px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -45,4 +66,120 @@
   border: 0;
   border-radius: 4px;
   background-color: #edeff6;
+}
+@media (min-width: @tablet-width) {
+  .step {
+    padding: 45px 44px 55px 44px;
+    margin: 40px 0;
+    border-radius: 30px;
+  }
+  .step__inner {
+    padding: 0;
+  }
+  .step__subtitle {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .step__desc {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .step__numeric-data {
+    display: flex;
+    flex-direction: column;
+  }
+  .step__input-number {
+    padding-top: 25px;
+    font-size: 20px;
+    line-height: 18px;
+    border-top: 1px solid #d6d9e6;
+    &--duration {
+      order: 2;
+    }
+  }
+  .step__checkbox-label {
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+    color: @main-blue;
+    text-transform: uppercase;
+  }
+  .step__calendar {
+    width: 100%;
+  }
+  .step__actions-block {
+    padding-top: 27px;
+    border-top: 1px solid #d6d9e6;
+  }
+  .step__btn-block {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .step__btn {
+    padding: 27px 36px 27px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    color: @main-blue;
+    &--back {
+      padding: 0;
+    }
+  }
+  .step__add-country {
+    width: 369px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .step {
+    padding: 55px 160px 105px 160px;
+    margin: 44px 0;
+    border-radius: 60px;
+  }
+  .step__header {
+    position: relative;
+    padding-right: 400px;
+  }
+  .step__subtitle br {
+    display: none;
+  }
+  .step__list-steps.list-steps {
+    display: block;
+  }
+  .step__list-steps {
+    position: absolute;
+    top: 20px;
+    right: 48px;
+  }
+  .step__numeric-data {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #d6d9e6;
+  }
+  .step__input-number {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    padding: 0;
+    border: 0;
+  }
+  .step__measure-unit {
+    order: 2;
+  }
+  .step__label {
+    width: 200px;
+  }
+  .step__number-block {
+    margin: 0 36px 0 20px;
+  }
+  .step__add-country {
+    width: 730px;
+  }
+  .step__actions-block {
+    padding-right: 112px;
+  }
 }

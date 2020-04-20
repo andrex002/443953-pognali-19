@@ -1,12 +1,54 @@
 .main-screen {
+  padding-top: 5px;
+  padding-bottom: 39px;
   background-color: #161c35;
+  background-image: url(../img/globe-back-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center top -73px;
+  background-size: cover;
 }
 .main-screen__wrapper {
   .centering();
 }
 .main-screen__title {
+  width: 260px;
+  margin: 17px auto;
   font-size: 36px;
   line-height: 40px;
   color: #ffffff;
   text-align: center;
+}
+@media (min-width: @tablet-width) {
+  .main-screen {
+    padding-top: 10px;
+    padding-bottom: 96px;
+  }
+  .main-screen__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+  }
+  .main-screen__title {
+    width: 435px;
+    margin: 20px auto;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .main-screen {
+    padding-top: 49px;
+    padding-bottom: 0;
+  }
+  .main-screen__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .main-screen__title {
+    margin: 0 70px;
+    text-align: left;
+  }
+  .main-screen__steps {
+    flex-grow: 1;
+  }
 }

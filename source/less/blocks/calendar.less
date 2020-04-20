@@ -1,3 +1,10 @@
+.calendar__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
 .calendar__month-year {
   font-size: 20px;
   line-height: 20px;
@@ -5,9 +12,17 @@
   color: @main-blue;
   text-align: center;
 }
+.calendar__btn {
+  font-size: 0;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
 .calendar__table {
+  width: 100%;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   border-collapse: collapse;
 }
@@ -31,4 +46,27 @@
 }
 .calendar__day--current {
   border: 2px solid #ff5c23;
+}
+@media (min-width: @tablet-width) {
+  .calendar__month-year {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .calendar__btn-img {
+    width: 19px;
+    height: 34px;
+  }
+  .calendar__table-head {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .calendar__table-row {
+    font-size: 20px;
+    line-height: 18px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .calendar__table {
+    text-align: left;
+  }
 }

@@ -1,3 +1,9 @@
+.actions__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+}
 .actions__label {
   font-size: 18px;
   line-height: 18px;
@@ -5,6 +11,36 @@
   color: @main-blue;
 }
 .actions__input {
+  width: 100%;
+  min-height: 220px;
+  padding: 10px 14px;
+  box-sizing: border-box;
   border-radius: 4px;
   resize: none;
+}
+@media (min-width: @tablet-width) {
+  .actions__header {
+    padding-left: 0;
+  }
+  .actions__label {
+    font-size: 30px;
+    line-height: 18px;
+  }
+  .actions__country-flag {
+    width: 70px;
+    height: 47px;
+  }
+  .actions__input {
+    padding: 15px 18px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (min-width: @desktop-width) {
+  .actions__input {
+    width: 730px;
+  }
+  .actions__label {
+    font-weight: 700;
+  }
 }

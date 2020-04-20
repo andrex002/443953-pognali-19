@@ -1,7 +1,22 @@
 .transports-travelmates {
   .list-reset();
+  display: flex;
+  justify-content: center;
 }
 .transports-travelmates__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
   font-size: 0;
   line-height: 0;
+  border-radius: 50%;
+  &--active .transports-travelmates__img {
+    opacity: 1;
+    fill: @main-blue;
+  }
+}
+.transports-travelmates__img {
+  opacity: 0.15;
 }

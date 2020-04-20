@@ -1,7 +1,39 @@
 .socials {
   .list-reset();
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .socials__item {
   font-size: 0;
   line-height: 0;
+}
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.socials__img {
+  fill: #192144;
+}
+@media (min-width: @tablet-width) {
+  .socials__link {
+    width: 60px;
+    height: 60px;
+  }
+  .socials__img--fb {
+    width: 14px;
+    height: 28px;
+  }
+  .socials__img--vk {
+    width: 31px;
+    height: 16px;
+  }
+  .socials__img--insta {
+    width: 24px;
+    height: 24px;
+  }
 }

@@ -1,0 +1,25 @@
+.copyright {
+  width: 100%;
+  padding: 14px 0;
+  border-top: 1px solid #f2f2f2;
+}
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: @base-text-color;
+}
+.copyright__logo {
+  fill: #192144;
+}
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: auto;
+    border: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .copyright__logo {
+    margin-left: 25px;
+  }
+}

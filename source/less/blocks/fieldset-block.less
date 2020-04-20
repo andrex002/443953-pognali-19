@@ -1,3 +1,6 @@
+.fieldset-block {
+  width: 100%;
+}
 .fieldset-block__title {
   line-height: 18px;
   color: @main-blue;
@@ -9,4 +12,14 @@
   border: 0;
   background-color: transparent;
   resize: none;
+}
+@media (min-width: @tablet-width) {
+  .fieldset-block__title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .fieldset-block__input {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

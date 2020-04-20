@@ -1,21 +1,93 @@
 .filter-country {
+  padding-top: 30px;
+  padding-bottom: 27px;
+  margin-top: -30px;
   background-color: #e2e5f2;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .filter-country__wrapper {
   .centering();
+}
+.filter-country__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .filter-country__title {
   font-size: 16px;
   color: #192144;
   text-transform: uppercase;
 }
-.filter-country .dropdown-block__letter {
-  background-color: #ffffff;
-  &--active {
-    background-color: @main-blue;
-    color: #ffffff;
+.filter-country__toogle {
+  display: flex;
+  justify-content: center;
+  width: 26px;
+  height: 12px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/filter-close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
   }
 }
-.filter-country .dropdown-block__list-countries {
-  border: 0;
+@media (min-width: @tablet-width) {
+  .filter-country {
+    padding-top: 60px;
+    padding-bottom: 74px;
+    margin-top: -60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .filter-country__wrapper {
+    .centering(@width: 688px, @padding: 40px);
+    padding-top: 55px;
+  }
+  .filter-country__title {
+    display: none;
+  }
+  .filter-country__toogle {
+    width: 174px;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+    &::before {
+      content: "свернуть";
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      color: #192144;
+      text-transform: uppercase;
+    }
+    &::after {
+      width: 18px;
+      height: 18px;
+      background-size: 18px 18px;
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .filter-country {
+    background-color: @base-background;
+  }
+  .filter-country__wrapper {
+    .centering(@width: 1320px, @padding: 60px);
+  }
+  .filter-country__title {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
