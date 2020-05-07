@@ -1,8 +1,9 @@
 .page-header {
-  background-color: #ffffff;
-}
-.page-header__wrapper {
-  .centering();
+  padding-top: 73px;
+  background-color: #161c34;
+  &--inner-page {
+    padding-top: 57px;
+  }
 }
 .page-header .contacts-block {
   display: none;
@@ -13,9 +14,11 @@
   padding-bottom: 10px;
 }
 @media (min-width: @tablet-width) {
-  .page-header__wrapper {
-    .centering(@width: 688px, @padding: 40px);
-    position: relative;
+  .page-header {
+    padding-top: 132px;
+    &--inner-page {
+      background-color: #161c35;
+    }
   }
   .page-header .user-block {
     display: block;
@@ -23,10 +26,7 @@
 }
 @media (min-width: @desktop-width) {
   .page-header {
-    background-color: #161c34;
-  }
-  .page-header__wrapper {
-    .centering(@width: 1320px, @padding: 60px);
+    padding-top: 99px;
   }
   .page-header .contacts-block {
     display: flex;

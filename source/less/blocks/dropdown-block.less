@@ -1,37 +1,46 @@
+.dropdown-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .dropdown-block__table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
 .dropdown-block__letter {
+  height: 40px;
+  width: 20%;
+  padding: 0;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   color: @main-blue;
   text-transform: uppercase;
   border: 1px solid #cbced9;
-}
-.dropdown-block__letter--active {
-  background-color: #edeff6;
+  &--active {
+    background-color: #edeff6;
+  }
 }
 .dropdown-block__list-countries {
   .list-reset();
-  padding: 55px 19px 15px 19px;
+  padding: 12px 19px 19px 19px;
   border-right: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
   border-left: 1px solid #cbced9;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.dropdown-block__countries-list {
-  .list-reset();
-}
-.dropdown-block__item {
-  font-weight: 700;
-  color: fade(#192144, 30%);
-  text-transform: uppercase;
-  &--active {
-    color: fade(#192144, 100%);
+.dropdown-block__country {
+  cursor: pointer;
+  &:hover {
+    color: @main-blue;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }
 .dropdown-block__country-link {
@@ -50,21 +59,34 @@
 @media (min-width: @tablet-width) {
   .dropdown-block {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    width: 574px;
     box-shadow: 0px 20px 50px 0px fade(@main-blue, 10%);
   }
   .dropdown-block__table {
     width: 262px;
-    margin: 34px 0 36px 27px;
+    margin: 35px 0 38px 27px;
   }
   .dropdown-block__letter {
+    width: 52px;
+    height: 68px;
     font-size: 20px;
+    &--active {
+      color: #ffffff;
+      background-color: @main-blue;
+    }
   }
   .dropdown-block__list-countries {
-    padding: 35px 20px 35px 25px;
+    width: 161px;
+    padding: 33px 20px 35px 25px;
     border: 0;
     border-left: 1px solid #eaecf2;
     border-radius: 0;
+  }
+  .dropdown-block__country {
+    font-size: 20px;
+    line-height: 30px;
   }
   .dropdown-block__countries-list {
     display: flex;
@@ -78,5 +100,25 @@
 @media (min-width: @desktop-width) {
   .dropdown-block {
     width: 730px;
+  }
+  .dropdown-block__table {
+    width: auto;
+    margin-left: 13px;
+    margin-top: 22px;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 15px;
+  }
+  .dropdown-block__letter {
+    width: 58px;
+    height: 68px;
+    border-radius: 3px;
+    &:hover {
+      border-color: #959bb2;
+    }
+  }
+  .dropdown-block__list-countries {
+    width: 195px;
+    padding-top: 32px;
   }
 }

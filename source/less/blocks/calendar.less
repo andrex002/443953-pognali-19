@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 11px 0;
+  margin-bottom: 15px;
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
 }
@@ -17,37 +19,72 @@
   padding: 0;
   background-color: transparent;
   border: 0;
+  opacity: 0.3;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 .calendar__table {
   width: 100%;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  text-transform: uppercase;
   border-collapse: collapse;
 }
 .calendar__weekday {
+  width: 29px;
+  height: 29px;
   font-weight: 400;
+  &--weekend {
+    color: #ff5c23;
+  }
 }
-.calendar__weekday--weekend {
-  color: #ff5c23;
+.calendar__weekday span,
+.calendar__day-info,
+.calendar__month-name {
+  display: none;
 }
 .calendar__day {
+  width: 29px;
+  height: 29px;
   border: 1px solid #cbced9;
   background-color: #edeff6;
-}
-.calendar__day--disabled {
-  background-color: #ffffff;
-  color: fade(@base-text-color, 30%);
-}
-.calendar__day--checked {
-  background-color: @main-blue;
-  color: #ffffff;
-}
-.calendar__day--current {
-  border: 2px solid #ff5c23;
+  &:hover {
+    outline: 2px solid #ff5c23;
+    outline-offset: -1px;
+    background-color: @main-blue;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  &--disabled {
+    background-color: #ffffff;
+    color: fade(@base-text-color, 30%);
+    &:hover {
+      background-color: #ffffff;
+      color: fade(@base-text-color, 30%);
+      border: 1px solid #cbced9;
+      cursor: default;
+      outline: none;
+    }
+  }
+  &--checked {
+    background-color: @main-blue;
+    color: #ffffff;
+  }
+  &--current {
+    outline: 2px solid #ff5c23;
+    outline-offset: -1px;
+  }
 }
 @media (min-width: @tablet-width) {
+  .calendar__info {
+    padding: 25px 15px;
+    margin-bottom: 30px;
+  }
   .calendar__month-year {
     font-size: 36px;
     line-height: 36px;
@@ -64,9 +101,54 @@
     font-size: 20px;
     line-height: 18px;
   }
+  .calendar__day {
+    height: 69px;
+    padding: 0;
+    box-sizing: border-box;
+    &--current {
+      outline-width: 4px;
+    }
+    &:hover {
+      outline-width: 4px;
+    }
+  }
+  .calendar__weekday {
+    height: 34px;
+  }
+  .calendar__weekday span {
+    display: inline;
+    text-transform: lowercase;
+  }
 }
 @media (min-width: @desktop-width) {
+  .calendar__info {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
   .calendar__table {
     text-align: left;
+  }
+  .calendar__table-row {
+    vertical-align: top;
+  }
+  .calendar__weekday {
+    height: 53px;
+    padding-left: 17px;
+  }
+  .calendar__day {
+    height: 71px;
+    width: 143px;
+    padding-top: 13px;
+    padding-left: 15px;
+  }
+  .calendar__day-info {
+    display: block;
+    margin: 8px 0;
+    letter-spacing: 0.05em;
+  }
+  .calendar__month-name {
+    display: inline;
+    letter-spacing: 0.05em;
   }
 }

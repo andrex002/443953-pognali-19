@@ -5,20 +5,45 @@
   line-height: 0;
 }
 .contacts-block__link {
+  position: relative;
   display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 18px 18px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+    border-radius: 50%;
+  }
   &--tel {
     background-color: @orange-title;
-    background-image: url(../img/topmenu-phone.svg);
+    &::before {
+      background-image: url(../img/topmenu-phone.svg);
+    }
+    &:hover {
+      background-color: #f26926;
+    }
   }
   &--email {
     background-color: #ffbd30;
-    background-image: url(../img/topmenu-mail.svg);
+    &::before {
+      background-image: url(../img/topmenu-mail.svg);
+    }
+    &:hover {
+      background-color: @orange-title;
+    }
+  }
+}
+.contacts-block__link:active {
+  &::before {
+    opacity: 0.3;
   }
 }
 @media (min-width: @desktop-width) {

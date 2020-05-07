@@ -1,6 +1,17 @@
 .pagination {
+  position: relative;
   background-color: #ffffff;
   border-radius: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: @base-background;
+    transform: translateX(-50%);
+  }
 }
 .pagination__list {
   .list-reset();
@@ -8,42 +19,74 @@
 }
 .pagination__controls {
   display: flex;
+  font-size: 0;
+  line-height: 0;
 }
 .pagination__btn {
   width: 50%;
+  padding: 15px 0;
   text-align: center;
-  &--next {
-    border-left: 1px solid @base-background;
+  &--prev {
+    padding-right: 10px;
   }
+  &--next {
+    padding-left: 10px;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.pagination__btn-icon {
+  display: inline-block;
+  border: 10px solid transparent;
+}
+.pagination__btn--prev .pagination__btn-icon {
+  border-right-color: #192144;
+}
+.pagination__btn--next .pagination__btn-icon {
+  border-left-color: #192144;
 }
 @media (min-width: @tablet-width) {
   .pagination {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 35px 25px 28px;
+    padding: 25px 25px 25px 28px;
+    &::before {
+      display: none;
+    }
   }
   .pagination__list {
     display: flex;
   }
-  .pagination__item {
+  .pagination__link {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     width: 50px;
     height: 50px;
-    border-radius: 50px;
-    &--current {
-      background-color: @yellow-btn;
-    }
-  }
-  .pagination__link {
-    font-size: 20px;
+    border-radius: 50%;
     line-height: 30px;
     font-weight: 700;
     color: #161c35;
+    background-color: @yellow-btn;
+  }
+  .pagination__link[href] {
+    background-color: transparent;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      background-color: @yellow-btn;
+      opacity: 1;
+    }
   }
   .pagination__btn {
+    padding: 0;
     &--next {
       margin-left: 33px;
       border: 0;
@@ -52,6 +95,6 @@
 }
 @media (min-width: @desktop-width) {
   .pagination {
-    padding-right: 44px;
+    padding-right: 34px;
   }
 }

@@ -1,46 +1,192 @@
+.actions {
+  position: relative;
+  padding-bottom: 23px;
+}
+.actions__line {
+  position: absolute;
+  top: 11px;
+  left: -15px;
+  width: 15px;
+  height: calc(100% - 2px);
+  border-top: 2px solid @main-blue;
+  border-bottom: 2px solid @main-blue;
+  border-left: 2px solid @main-blue;
+}
 .actions__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 12px;
+  margin-bottom: 13px;
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: @main-blue;
+    border-radius: 50%;
+  }
+}
+.actions__label-block {
+  position: relative;
+  flex-grow: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, #ffffff 45%);
+  }
 }
 .actions__label {
+  padding-left: 7px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 500;
   color: @main-blue;
+  letter-spacing: -0.007em;
+}
+.actions__input-wrapper {
+  position: relative;
+  box-sizing: border-box;
+  line-height: 0;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  overflow: hidden;
+  &::after {
+    content: "Это поле должно быть заполнено";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ff0000;
+    background-color: #ffefef;
+  }
+  &:hover {
+    border-color: #959bb2;
+  }
+  &:focus-within {
+    border-color: #161c35;
+  }
+  &--error {
+    border-color: #f47e7e;
+    &::after {
+      display: block;
+    }
+    &:hover {
+      border-color: #f47e7e;
+    }
+    &:focus-within {
+      border-color: #f47e7e;
+    }
+  }
 }
 .actions__input {
   width: 100%;
-  min-height: 220px;
-  padding: 10px 14px;
+  min-height: 218px;
+  padding: 8px 14px 8px 14px;
   box-sizing: border-box;
-  border-radius: 4px;
+  font-size: 16px;
+  line-height: 22px;
+  border: 0;
   resize: none;
+  outline: 0;
+  &:focus {
+    border-color: #161c35;
+  }
 }
 @media (min-width: @tablet-width) {
+  .actions {
+    padding-bottom: 42px;
+    line-height: 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  .actions__line {
+    width: 0;
+    top: 22px;
+    left: auto;
+    right: -28px;
+  }
   .actions__header {
+    position: relative;
     padding-left: 0;
+    margin-bottom: 30px;
+    &::before {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 18px;
+      right: -34px;
+    }
   }
   .actions__label {
+    padding-left: 0;
     font-size: 30px;
     line-height: 18px;
+    letter-spacing: 0.007em;
   }
   .actions__country-flag {
     width: 70px;
     height: 47px;
   }
+  .actions__input-wrapper {
+    &::after {
+      font-size: 18px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
   .actions__input {
-    padding: 15px 18px;
+    min-height: 140px;
+    padding: 15px 30px 15px 18px;
     font-size: 20px;
     line-height: 24px;
   }
 }
 @media (min-width: @desktop-width) {
+  .actions {
+    padding-bottom: 47px;
+  }
+  .actions__header {
+    margin-bottom: 25px;
+    &::before {
+      top: 13px;
+      right: 103px;
+    }
+  }
+  .actions__line {
+    top: 20px;
+    right: 110px;
+  }
+  .actions__input-wrapper {
+    width: 730px;
+    &::after {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 16px 25px;
+    }
+  }
   .actions__input {
     width: 730px;
+    padding: 23px 17px 23px 25px;
   }
   .actions__label {
     font-weight: 700;
+    letter-spacing: -0.007em;
+  }
+  .actions__label-block {
+    margin-bottom: 10px;
+    &::after {
+      display: none;
+    }
   }
 }

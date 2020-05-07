@@ -1,10 +1,24 @@
+.list-countries {
+  display: flex;
+  flex-wrap: wrap;
+}
 .list-countries__table {
   .centering(@width: 220px, @padding: 0);
+  margin-bottom: 14px;
   border-collapse: collapse;
 }
 .list-countries__letter {
+  width: 43px;
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: @main-blue;
+  text-align: center;
   background-color: #ffffff;
   border: 1px solid #cbced9;
+  cursor: pointer;
   &--active {
     background-color: @main-blue;
     color: #ffffff;
@@ -13,6 +27,7 @@
 .list-countries__block {
   .list-reset();
   .centering(@width: 220px, @padding: 0);
+  margin-bottom: 23px;
 }
 .list-countries__initial-letter {
   display: none;
@@ -22,7 +37,8 @@
 }
 .list-countries__btn-close {
   width: 100%;
-  padding: 0;
+  padding: 5px;
+  margin-bottom: 27px;
   box-sizing: border-box;
   font-size: 17px;
   line-height: 30px;
@@ -33,21 +49,38 @@
   border: 0;
   border-radius: 20px;
   cursor: pointer;
+  &:hover {
+    background-color: #c8cee8;
+  }
+}
+.list-countries__btn-close:active .list-countries__btn-inner {
+  opacity: 0.3;
+}
+.list-countries__btn-inner {
+  padding-left: 24px;
+  background-image: url(../img/filter-close.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 12px;
 }
 @media (min-width: @tablet-width) {
   .list-countries {
     display: flex;
+    padding: 0 35px;
   }
   .list-countries__table {
-    width: 390px;
+    width: 385px;
     margin: 0;
-    margin-right: 55px;
+    margin-right: 58px;
   }
   .list-countries__letter {
+    width: 77px;
+    height: 83px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
     color: fade(#192144, 20%);
+    text-align: left;
     background-color: transparent;
     border: 0;
     &--active {
@@ -57,22 +90,37 @@
   .list-countries__block {
     width: auto;
     margin: 0;
+    margin-top: 11px;
   }
   .list-countries__btn-close {
     padding: 35px;
+    margin-top: 55px;
+    margin-bottom: 65px;
     font-size: 20px;
     color: @main-blue;
   }
+  .list-countries__btn-inner {
+    padding-left: 39px;
+    background-size: 18px;
+  }
 }
 @media (min-width: @desktop-width) {
+  .list-countries {
+    padding: 0;
+  }
   .list-countries__table {
     display: none;
   }
   .list-countries__block {
     display: flex;
+    padding: 0 35px;
+    margin-top: -30px;
     flex-wrap: wrap;
   }
   .list-countries__initial-letter {
     display: block;
+  }
+  .list-countries__btn-close {
+    margin-top: 84px;
   }
 }

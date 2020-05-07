@@ -1,29 +1,59 @@
 .companion {
   background-color: #ffffff;
   border-radius: 10px;
-  overflow: hidden;
+  &:hover {
+    & .companion__image {
+      transform: scale(1.2);
+    }
+  }
+}
+.companion--active .companion__name-link::before {
+  background-color: #81e31e;
 }
 .companion__image-block {
   position: relative;
   line-height: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
 }
 .companion__desc {
   position: relative;
-  padding: 15px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 18px 15px 18px;
 }
 .companion__level {
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 15px;
+  left: 15px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
 }
-.companion__level > span {
+.companion__level-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 31px;
+  margin: 0;
+  text-align: center;
+}
+.companion__level-text > span {
+  display: block;
+  padding-top: 2px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+  border-top: 1px solid #ffffff;
+}
+.companion__level-chart {
+  fill-opacity: 0.6;
 }
 .companion__countries {
   .list-reset();
@@ -35,26 +65,90 @@
   width: 100%;
 }
 .companion__country-flag {
+  position: relative;
   margin: 0 9.5px;
-  font-size: 0;
   line-height: 0;
+  &:hover {
+    & .tooltip {
+      display: block;
+    }
+  }
 }
 .companion__name {
-  margin: 12px 0;
+  position: relative;
+  margin: 13px 17px 13px 0;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+}
+.companion__name-link {
+  position: relative;
+  padding-left: 17px;
   color: @main-blue;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: #f97676;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+.companion__tags.tags-travelmates {
+  padding: 0 15px;
+  margin-bottom: 7px;
 }
 @media (min-width: @tablet-width) {
   .companion {
     width: 285px;
+    padding-bottom: 7px;
+    border-radius: 20px;
   }
   .companion__name {
+    margin: 20px 22px 20px 0;
     font-size: 24px;
     line-height: 24px;
   }
+  .companion__name-link {
+    padding-left: 22px;
+    &::before {
+      width: 7px;
+      height: 7px;
+    }
+  }
+  .companion__desc {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .companion__image-block {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .companion__image {
+    width: 285px;
+    height: 285px;
+  }
+  .companion__level {
+    top: 20px;
+    left: 20px;
+  }
+  .companion__tags.tags-travelmates {
+    margin-top: 2px;
+    margin-bottom: 19px;
+  }
 }
 @media (min-width: @desktop-width) {
-
+  .companion__level {
+    top: 22px;
+    left: 22px;
+  }
 }
