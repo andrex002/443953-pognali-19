@@ -1,21 +1,83 @@
 .number-block {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   width: 100%;
-  border: 1px solid #cbced9;
 }
 .number-block__input {
+  width: 100%;
+  padding: 12.5px 60px 11px 60px;
+  box-sizing: border-box;
   font-size: 15px;
   line-height: 15px;
   font-weight: 500;
   color: @main-blue;
   text-align: center;
+  border: 1px solid #cbced9;
+  border-radius: 5px;
+  outline: none;
+  -moz-appearance:textfield;
+  &:hover {
+    border-color: #959bb2;
+  }
+  &:focus {
+    border-color: #161c35;
+  }
+}
+.number-block__input:hover ~ .number-block__btn {
+  opacity: 0.4;
+}
+.number-block__input:focus ~ .number-block__btn {
+  opacity: 1;
+}
+.number-block__input::-webkit-outer-spin-button,
+.number-block__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.number-block__btn {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  padding: 0 13px;
+  font-size: 0;
+  background-color: transparent;
   border: 0;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 14px;
+  opacity: 0.2;
+  &--minus {
+    background-image: url(../img/qty-minus-mobile.svg);
+    left: 0;
+  }
+  &--plus {
+    background-image: url(../img/qty-plus-mobile.svg);
+    right: 0;
+  }
+  &:hover {
+    opacity: 0.4;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 @media (min-width: @tablet-width) {
   .number-block__input {
+    padding-top: 21px;
+    padding-bottom: 23px;
     font-size: 20px;
     line-height: 18px;
+  }
+  .number-block__btn {
+    width: 64px;
+    padding: 0 22px;
+    background-size: 20px;
+    &--minus {
+      background-image: url(../img/qty-minus.svg);
+    }
+    &--plus {
+      background-image: url(../img/qty-plus.svg);
+    }
   }
 }
 @media (min-width: @desktop-width) {

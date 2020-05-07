@@ -3,11 +3,25 @@
   margin: 10px 0;
   background-color: #ffffff;
   border-radius: 10px;
+  &--two {
+    padding-bottom: 11px;
+  }
+  &--three {
+    padding-bottom: 11px;
+  }
 }
 .step__inner {
-  padding: 22px 25px;
+  padding: 23px 25px 0 25px;
+}
+.step__desc br {
+  display: none;
+}
+.step__header {
+  margin-bottom: 21px;
 }
 .step__subtitle {
+  margin-top: 0;
+  margin-bottom: 17px;
   font-size: 20px;
   line-height: 20px;
   color: @main-blue;
@@ -15,30 +29,42 @@
 .step__list-steps.list-steps {
   display: none;
 }
+.step__number-block {
+  margin-top: 10px;
+}
 .step__input-number {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 19px;
   line-height: 16px;
   font-weight: 500;
   color: @main-blue;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 .step__measure-unit {
   color: fade(@main-blue, 30%);
 }
 .step__checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2px;
+  margin-bottom: 21px;
   font-size: 15px;
   line-height: 15px;
 }
 .step__btn-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  width: 230px;
+  margin: 0 auto;
+  text-align: center;
 }
 .step__btn {
-  display: inline-block;
+  display: block;
   width: 230px;
+  padding: 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -48,99 +74,277 @@
   background-color: @yellow-btn;
   border: 0;
   border-radius: 20px;
+  &:hover {
+    background-color: #ffbd30;
+  }
+  &:active .step__btn-inner {
+    opacity: 0.3;
+  }
   &--back {
+    display: inline-block;
     width: auto;
+    padding: 0;
+    margin-top: 11px;
     background-color: transparent;
     border-radius: 0;
+    &:hover {
+      background-color: transparent;
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
+.step__btn-arrow {
+  display: none;
+}
+.step__checkbox:checked + .step__visual-checkbox::before {
+  background-image: url(../img/tick.svg);
+}
+.step__visual-checkbox {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin-right: 13px;
+  box-sizing: border-box;
+  border: 1px solid #cbced9;
+  border-radius: 3px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 9px;
+  }
+  &:hover {
+    border-color: #959bb2;
+  }
+  &:active {
+    background-color: #e2e5f1;
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+.step__calendar {
+  margin-bottom: 22px;
+}
 .step__add-country {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 12px;
+  padding: 12px 15px 12px 12px;
+  margin-bottom: 25px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
   color: @main-blue;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.1px;
+  background-color: transparent;
   border: 0;
   border-radius: 4px;
-  background-color: #edeff6;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    right: 49px;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    background-color: @base-background;
+    border-radius: 50%;
+    border: 1px solid #cbced9;
+  }
+  &:hover {
+    background-color: #edeff6;
+  }
+  &:active {
+    color: fade(@main-blue, 30%);
+  }
+}
+.step__add-country:hover .step__add-img {
+  fill-opacity: 0.3;
+}
+.step__add-country:active .step__add-img {
+  fill-opacity: 0.1;
+}
+.step__add-img {
+  fill-opacity: 0.2;
 }
 @media (min-width: @tablet-width) {
   .step {
-    padding: 45px 44px 55px 44px;
-    margin: 40px 0;
+    padding: 44px 44px 55px 44px;
+    margin: 0;
+    margin-bottom: 40px;
     border-radius: 30px;
+    &--two {
+      padding-bottom: 53px;
+      margin-bottom: 52px;
+    }
+  }
+  .step--two .step__header {
+    margin-bottom: 34px;
   }
   .step__inner {
     padding: 0;
+    margin-bottom: 46px;
+  }
+  .step__desc br {
+    display: inline;
+  }
+  .step__selection-unit {
+    position: relative;
+    padding-top: 42px;
+    margin-bottom: 48px;
+    border-top: 1px solid #d6d9e6;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      right: 135px;
+      width: 1px;
+      height: 117%;
+      background-image: linear-gradient(to bottom, #d6d9e6 80%, transparent);
+    }
+  }
+  .step__header {
+    margin-bottom: 39px;
   }
   .step__subtitle {
+    margin-bottom: 37px;
     font-size: 36px;
     line-height: 36px;
+    letter-spacing: -0.008em;
   }
   .step__desc {
+    padding-right: 15px;
     font-size: 20px;
     line-height: 24px;
+  }
+  .step__number-block {
+    margin-top: 26px;
   }
   .step__numeric-data {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
   }
   .step__input-number {
-    padding-top: 25px;
+    width: 100%;
+    padding-top: 24px;
     font-size: 20px;
     line-height: 18px;
     border-top: 1px solid #d6d9e6;
+    letter-spacing: 0.09em;
     &--duration {
       order: 2;
     }
   }
+  .step__visual-checkbox {
+    width: 36px;
+    height: 36px;
+    margin-right: 23px;
+    &:before {
+      background-size: 12px;
+    }
+  }
   .step__checkbox-label {
+    margin-top: 6px;
+    margin-bottom: 26px;
     font-size: 20px;
     line-height: 18px;
     font-weight: 500;
     color: @main-blue;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
   .step__calendar {
     width: 100%;
   }
   .step__actions-block {
-    padding-top: 27px;
+    padding-top: 25px;
+    padding-right: 30px;
+    margin-top: -5px;
     border-top: 1px solid #d6d9e6;
   }
   .step__btn-block {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .step__btn {
-    padding: 27px 36px 27px 33px;
+    display: inline-block;
+    width: auto;
+    padding: 28px 37px 29px 33px;
+    margin: 0;
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
     color: @main-blue;
+    &--submit {
+      width: 285px;
+      box-sizing: border-box;
+      text-align: left;
+    }
     &--back {
       padding: 0;
+      margin-right: -2px;
+    }
+  }
+  .step__btn-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .step__btn-arrow {
+    display: inline;
+    margin-left: 31px;
+    fill: @main-blue;
+    &--left {
+      margin-left: 0;
+      margin-right: 22px;
     }
   }
   .step__add-country {
     width: 369px;
+    padding: 26px 28px 27px 24px;
     box-sizing: border-box;
     font-size: 20px;
     line-height: 18px;
+    &::before {
+      bottom: 32px;
+      right: -33px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .step__add-img {
+    width: 18px;
+    height: 18px;
   }
 }
 @media (min-width: @desktop-width) {
   .step {
-    padding: 55px 160px 105px 160px;
-    margin: 44px 0;
+    padding: 96px 160px 105px 160px;
+    margin-bottom: 44px;
     border-radius: 60px;
+  }
+  .step__inner {
+    margin-bottom: 55px;
   }
   .step__header {
     position: relative;
     padding-right: 400px;
+    margin-bottom: 53px;
   }
   .step__subtitle br {
     display: none;
@@ -150,13 +354,15 @@
   }
   .step__list-steps {
     position: absolute;
-    top: 20px;
-    right: 48px;
+    top: 10px;
+    right: 45px;
   }
   .step__numeric-data {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 31px;
+    margin-bottom: 17px;
     border-top: 1px solid #d6d9e6;
   }
   .step__input-number {
@@ -165,6 +371,7 @@
     align-items: center;
     width: 600px;
     padding: 0;
+    margin-bottom: 15px;
     border: 0;
   }
   .step__measure-unit {
@@ -173,13 +380,38 @@
   .step__label {
     width: 200px;
   }
+  .step__checkbox-label {
+    margin-top: 17px;
+  }
+  .step__visual-checkbox {
+    margin-right: 21px;
+  }
   .step__number-block {
     margin: 0 36px 0 20px;
   }
   .step__add-country {
     width: 730px;
+    &::before {
+      bottom: 30px;
+      right: -52px;
+    }
   }
   .step__actions-block {
-    padding-right: 112px;
+    padding-top: 75px;
+    padding-right: 115px;
+    margin-top: 55px;
+  }
+  .step__selection-unit {
+    padding-top: 62px;
+    margin-top: 54px;
+    &::before {
+      right: 225px;
+      height: 135%;
+    }
+  }
+  .step__btn {
+    &--back {
+      margin-right: 3px;
+    }
   }
 }
