@@ -3,9 +3,6 @@
   padding: 30px 0;
   margin-top: -30px;
   background-color: #192144;
-  background-image: url(../img/rogovaya-back-mobile@1x.png);
-  background-repeat: no-repeat;
-  background-position: left -10px top 26.7%;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 5;
@@ -15,9 +12,25 @@
   padding-top: 39px;
 }
 .companions__inner {
+  position: relative;
   background-image: url(../img/smolov-back-desktop@1x.png);
   background-repeat: no-repeat;
   background-position: right top;
+  @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
+    background-image: url(../img/smolov-back-desktop@2x.png);
+    background-size: 143px auto;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -45px;
+    width: 132px;
+    height: 132px;
+    background-color: #141b3b;
+    border-radius: 20px;
+    z-index: -1;
+  }
 }
 .companions__desc {
   padding: 18px 27px 20px 23px;
@@ -42,7 +55,23 @@
 }
 .companions__list {
   .list-reset();
+  position: relative;
   margin-bottom: 21px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    width: 71px;
+    height: 71px;
+    background-image: url(../img/rogovaya-back-mobile@1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
+      background-image: url(../img/rogovaya-back-mobile@2x.png);
+      background-size: 71px auto;
+    }
+  }
 }
 .companions__item {
   margin-bottom: 12px;
@@ -83,6 +112,15 @@
     padding: 13px 35px 0 35px;
     background-image: url(../img/smolov-back-desktop@1x.png), url(../img/rogovaya-back-desktop@1x.png);
     background-position: left top 346px, right 35px top;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/smolov-back-desktop@2x.png), url(../img/rogovaya-back-desktop@2x.png);
+      background-size: 143px auto, 285px auto;
+    }
+    &::before {
+      width: 213px;
+      height: 213px;
+      left: 0;
+    }
   }
   .companions__desc {
     width: 430px;
@@ -110,6 +148,9 @@
     flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 68px;
+    &::before {
+      display: none;
+    }
   }
   .companions__item {
     margin-right: 48px;
@@ -142,8 +183,8 @@
   }
   .companions__list {
     position: absolute;
-    right: 60px;
-    top: 73px;
+    right: 0;
+    top: 5px;
   }
   .companions__item {
     margin-right: 60px;

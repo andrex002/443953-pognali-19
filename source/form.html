@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <title>Погнали: Направления</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js" async></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,9 +19,19 @@
     <nav class="main-nav main-nav--closed main-nav--no-js main-nav--inner-page">
       <div class="main-nav__wrapper">
         <div class="main-nav__top">
-          <a class="page-header__logo logo" href="index.html">
-            <img class="logo__image logo__image--blue" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали">
-            <img class="logo__image logo__image--white" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса Погнали">
+          <a class="page-header__logo logo logo--white" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__image logo__image--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Логотип сервиса Погнали">
+            </picture>
+          </a>
+          <a class="page-header__logo logo logo--blue" href="index.html">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+              <img class="logo__image logo__image--blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса Погнали">
+            </picture>
           </a>
           <button class="main-nav__toogle" type="button">
             Открыть меню
@@ -158,7 +173,11 @@
               </svg>
             </div>
             <div class="user-setting__image-block">
-              <img class="user-setting__image" src="img/photo-account-mobile@1x.jpg" width="100" height="100" alt="Фото пользователя">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+                <img class="user-setting__image" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Фото пользователя">
+              </picture>
             </div>
             <button class="user-setting__edit-photo"><span>Сменить</span> фото</button>
             <fieldset class="user-setting__tags user-data user-data--tags" data-heading="Тэги">
@@ -426,7 +445,7 @@
                         <div class="select-country__arrow-block"></div>
                       </div>
                       <div class="select-country__flag">
-                        <img class="select-country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Изображение флага Босния и Герцеговина">
+                        <img class="select-country__flag-img" src="img/flag-bosnia.svg" width="35" height="24" alt="Изображение флага Босния и Герцеговина">
                       </div>
                       <button class="select-country__close-btn" type="button">
                         Удалить страну
@@ -445,7 +464,7 @@
                         <div class="select-country__arrow-block"></div>
                       </div>
                       <div class="select-country__flag">
-                        <img class="select-country__flag-img" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Изображение флага Чехия">
+                        <img class="select-country__flag-img" src="img/flag-czech.svg" width="35" height="24" alt="Изображение флага Чехия">
                       </div>
                       <button class="select-country__close-btn" type="button">
                         Удалить страну
@@ -572,7 +591,7 @@
                       <div class="actions__label-block">
                         <label class="actions__label" for="actions-one-country">Босния и Герцеговина</label>
                       </div>
-                      <img class="actions__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Изображение флага Босния и Герцеговина">
+                      <img class="actions__country-flag" src="img/flag-bosnia.svg" width="35" height="24" alt="Изображение флага Босния и Герцеговина">
                     </div>
                     <div class="actions__input-wrapper actions__input-wrapper--error">
                       <textarea class="actions__input" name="actions-one-country" id="actions-one-country" placeholder="План действий" required></textarea>
@@ -583,7 +602,7 @@
                       <div class="actions__label-block">
                         <label class="actions__label" for="actions-two-country">Чехия</label>
                       </div>
-                      <img class="actions__country-flag" src="https://via.placeholder.com/35x24" width="35" height="24" alt="Изображение флага Чехия">
+                      <img class="actions__country-flag" src="img/flag-czech.svg" width="35" height="24" alt="Изображение флага Чехия">
                     </div>
                     <div class="actions__input-wrapper">
                       <textarea class="actions__input" name="actions-two-country" id="actions-two-country" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
@@ -617,8 +636,12 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a class="page-footer__logo logo">
-        <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса Погнали">
+      <a class="page-footer__logo logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип сервиса Погнали">
+        </picture>
       </a>
       <ul class="page-footer__socials socials">
         <li class="socials__item">
