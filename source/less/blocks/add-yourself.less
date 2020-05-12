@@ -18,6 +18,9 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 99px;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(../img/rates@2x.png);
+  }
 }
 .add-yourself__title {
   width: 150px;
@@ -61,8 +64,20 @@
     text-align: center;
   }
   .add-yourself__tariffs {
+    position: relative;
     margin-top: 76px;
-    margin-bottom: 32px;
+    margin-bottom: 34px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -43px;
+      right: 0;
+      width: 198px;
+      height: 285px;
+      background-color: #e2e5f2;
+      border-radius: 20px;
+      z-index: -1;
+    }
   }
   .add-yourself__business-tariff {
     position: relative;
@@ -121,5 +136,11 @@
   }
   .add-yourself__tariffs {
     margin-top: 135px;
+    margin-bottom: 32px;
+    &::before {
+      top: -48px;
+      width: 444px;
+      height: 300px;
+    }
   }
 }
