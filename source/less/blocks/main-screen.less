@@ -9,6 +9,9 @@
   background-size: contain;
   border-bottom: 1px solid transparent;
   z-index: 8;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(../img/globe-back-mobile956@2x.jpg);
+  }
 }
 .main-screen__wrapper {
   .centering();
@@ -17,6 +20,10 @@
   background-image: url(../img/traveller-illustration-mobile@1x.png);
   background-repeat: no-repeat;
   background-position: left 54px bottom;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url(../img/traveller-illustration-mobile@2x.png);
+    background-size: 192px auto;
+  }
 }
 .main-screen__title {
   width: 260px;
@@ -43,6 +50,9 @@
     background-image: url(../img/globe-back-tablet@1x.jpg);
     background-position: center bottom;
     background-size: auto 612px;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/globe-back-tablet@2x.jpg);
+    }
   }
   .main-screen__wrapper {
     .centering(@width: 688px, @padding: 40px);
@@ -51,6 +61,10 @@
     background-image: url(../img/traveller-illustration-tablet@1x.png);
     background-repeat: no-repeat;
     background-position: 244px 245px;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/traveller-illustration-tablet@2x.png);
+      background-size: 372px auto;
+    }
   }
   .main-screen__top {
     background-image: none;
@@ -74,10 +88,13 @@
     padding-top: 0;
     padding-bottom: 0;
     background-image: url(../img/globe-back-desktop@1x.jpg);
-    background-size: auto;
+    background-size: cover;
     background-position: center bottom 0;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/globe-back-desktop@2x.jpg);
+    }
   }
   .main-screen__wrapper {
     .centering(@width: 1320px, @padding: 60px);
@@ -93,6 +110,10 @@
     padding-bottom: 41px;
     background-image:  url(../img/traveller-illustration-desktop@1x.png);
     background-position:  right 345px bottom 0;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/traveller-illustration-desktop@2x.png);
+      background-size: 431px auto;
+    }
   }
   .main-screen__title {
     margin: 0 67px;

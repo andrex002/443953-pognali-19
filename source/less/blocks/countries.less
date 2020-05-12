@@ -71,10 +71,25 @@
     .centering(@width: 688px, @padding: 40px);
   }
   .countries__inner {
+    position: relative;
     padding: 0 35px;
     background-image: url(../img/flags-back@1x.png);
     background-repeat: no-repeat;
     background-position: right 0 top 10px;
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url(../img/flags-back@2x.png);
+      background-size: 289px auto;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 467px;
+      left: 0;
+      width: 141px;
+      height: 141px;
+      background-color: #e2e5f2;
+      border-radius: 20px;
+    }
   }
   .countries__title {
     width: 345px;
@@ -110,6 +125,10 @@
     position: relative;
     padding: 72px 0 80px 801px;
     background-position: right top;
+    &::before {
+      top: 0;
+      bottom: auto;
+    }
   }
   .countries__title {
     margin-top: 3px;

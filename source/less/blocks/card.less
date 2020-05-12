@@ -141,16 +141,49 @@
 }
 .card__countries-list {
   .list-reset();
-  padding-left: 39px;
   margin: 0 11px;
 }
 .card__country {
+  padding-left: 39px;
   margin: 10px 0;
   font-size: 15px;
   line-height: 18px;
   font-weight: 500;
   color: @main-blue;
   text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 26px 18px;
+  &--sri-lanka {
+    background-image: url(../img/flag-sri-lanka.svg);
+  }
+  &--tailand {
+    background-image: url(../img/flag-thailand.svg);
+  }
+  &--seychelles {
+    background-image: url(../img/flag-seychelles.svg);
+  }
+  &--belgium {
+    background-image: url(../img/flag-belgium.svg);
+  }
+  &--chech {
+    background-image: url(../img/flag-czech.svg);
+  }
+  &--usa {
+    background-image: url(../img/flag-usa.svg);
+  }
+  &--australia {
+    background-image: url(../img/flag-australia.svg);
+  }
+  &--dominic {
+    background-image: url(../img/flag-dominica.svg);
+  }
+  &--great-britain {
+    background-image: url(../img/flag-united-kingdom.svg);
+  }
+  &--germany {
+    background-image: url(../img/flag-germany.png);
+  }
 }
 .card__transport-level {
   position: relative;
@@ -372,9 +405,11 @@
   }
   .card__country {
     padding-left: 46px;
-    margin-right: 28px;
+    margin-right: 26px;
     font-size: 20px;
     line-height: 30px;
+    background-position: left center;
+    background-size: 35px 24px;
   }
 }
 @media (min-width: @desktop-width) {
@@ -397,7 +432,7 @@
     position: relative;
     width: 346px;
     max-width: 100%;
-    padding: 47px 25px 47px 34px;
+    padding: 47px 25px 46px 34px;
     box-sizing: border-box;
     &::after {
       content: "";

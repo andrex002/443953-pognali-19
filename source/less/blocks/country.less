@@ -4,7 +4,11 @@
   border-radius: 10px;
   overflow: hidden;
 }
+.country picture {
+  line-height: 0;
+}
 .country__desc {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -12,6 +16,28 @@
   margin-top: -10px;
   background-color: #ffffff;
   border-radius: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 35px;
+    height: 24px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35px auto;
+    transform: translateY(-50%);
+  }
+}
+.country--thailand .country__desc::before {
+  background-image: url(../img/flag-thailand.svg);
+}
+.country--france .country__desc::before {
+  background-image: url(../img/flag-france.svg);
+}
+.country--czech .country__desc::before {
+  background-image: url(../img/flag-czech.svg);
 }
 .country__title {
   margin: 4px 0;
@@ -54,7 +80,6 @@
   .country__img {
     width: 186px;
     height: auto;
-    order: 2;
   }
   .country__desc {
     flex-direction: column;
@@ -64,6 +89,16 @@
     padding-right: 30px;
     margin-top: 0;
     border-radius: 0;
+    order: -1;
+    &::before {
+      top: 15px;
+      left: auto;
+      right: 0;
+      width: 70px;
+      height: 47px;
+      background-size: 70px auto;
+      transform: translate(52%, 0);
+    }
   }
   .country__title {
     font-size: 24px;
@@ -91,6 +126,10 @@
   }
   .country__desc {
     padding-top: 18px;
+    &::before {
+      top: 23px;
+      transform: translate(51%, 0);
+    }
   }
   .country__user-amount {
     margin-top: 17px;
