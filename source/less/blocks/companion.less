@@ -17,6 +17,9 @@
   border-top-right-radius: 10px;
   overflow: hidden;
 }
+.companion__image {
+  transition: all 0.3s ease;
+}
 .companion__desc {
   position: relative;
   display: flex;
@@ -54,6 +57,12 @@
 }
 .companion__level-chart {
   fill-opacity: 0.6;
+  &--firsova {
+    stroke-dasharray: 99 1;
+  }
+  &--demin {
+    stroke-dasharray: 80 20;
+  }
 }
 .companion__countries {
   .list-reset();
