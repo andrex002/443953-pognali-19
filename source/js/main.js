@@ -19,7 +19,7 @@ mainNavToogle.addEventListener('click', function() {
   openedMenu = !openedMenu;
 });
 window.onscroll = function() {
-  if(window.scrollY > mainNav.clientHeight) {
+  if(window.pageYOffset > mainNav.clientHeight) {
       mainNav.classList.add('main-nav--scrolled');
   } else {
       mainNav.classList.remove('main-nav--scrolled');
@@ -38,25 +38,23 @@ if(showTariffs) {
     }
   });
 }
-if(selectCountryBlock) {
-  for(let i = 0; i < selectCountryToogle.length; i++) {
-    selectCountryToogle[i].addEventListener('click', function() {
-      selectCountryBlock[i].classList.toggle('select-country__head--opened');
-    });
-  }
-}
 if(filterCountryToggle || btnCloseCountryFilter) {
   filterCountryToggle.addEventListener('click', closeFilterCountry);
   btnCloseCountryFilter.addEventListener('click', closeFilterCountry);
 }
-let filterClickHandler = function(toggler, filter) {
+let filterClickHandler = function(toggler, block, className) {
   toggler.addEventListener('click', function() {
-    filter.classList.toggle('filter--closed');
+    block.classList.toggle(className);
   });
 };
 if(filter) {
   for(let i = 0; i < filter.length; i++) {
-    filterClickHandler(filterTitle[i], filter[i]);
+    filterClickHandler(filterTitle[i], filter[i], 'filter--closed');
+  }
+}
+if(selectCountryBlock) {
+  for(let i = 0; i < selectCountryToogle.length; i++) {
+    filterClickHandler(selectCountryToogle[i], selectCountryBlock[i], 'select-country__head--opened');
   }
 }
 function closeTariffs(evt) {
