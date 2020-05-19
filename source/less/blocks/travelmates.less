@@ -4,11 +4,13 @@
   align-items: center;
   margin-bottom: 22px;
 }
+
 .travelmates__list {
   .list-reset();
   width: 100%;
   margin-bottom: 10px;
 }
+
 .travelmates__show-more {
   padding-left: 33px;
   font-size: 17px;
@@ -16,24 +18,29 @@
   font-weight: 700;
   color: @main-blue;
   text-transform: uppercase;
-  background-image: url(../img/show-more-plus.svg);
+  background-image: url("../img/show-more-plus.svg");
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 18px 18px;
+
   &:hover {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 @media (min-width: @tablet-width) {
   .travelmates {
     margin-bottom: 49px;
   }
+
   .travelmates__list {
     margin-bottom: 4px;
   }
+
   .travelmates__show-more {
     padding-left: 50px;
     margin-right: 9px;
@@ -41,15 +48,18 @@
     background-size: 27px 27px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .travelmates {
     width: 950px;
     margin-bottom: 69px;
     box-sizing: border-box;
   }
+
   .travelmates__list {
     margin-bottom: 35px;
   }
+
   .travelmates__show-more {
     margin-right: 74px;
   }

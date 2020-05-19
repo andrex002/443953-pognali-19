@@ -7,19 +7,23 @@
   border-bottom-right-radius: 30px;
   z-index: 5;
 }
+
 .companions__wrapper {
   .centering();
   padding-top: 39px;
 }
+
 .companions__inner {
   position: relative;
-  background-image: url(../img/smolov-back-desktop@1x.png);
+  background-image: url("../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
   background-position: right top;
-  @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
-    background-image: url(../img/smolov-back-desktop@2x.png);
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/smolov-back-desktop@2x.png");
     background-size: 143px auto;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -32,31 +36,38 @@
     z-index: -1;
   }
 }
+
 .companions__desc {
   padding: 18px 27px 20px 23px;
   margin-bottom: 16px;
 }
+
 .companions__title {
   margin: 13px 0;
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
 }
+
 .companions__text {
   margin: 22px 0;
   font-weight: 300;
   color: #ffffff;
+
   &--bold {
     font-weight: 700;
   }
 }
+
 .companions__text br {
   display: none;
 }
+
 .companions__list {
   .list-reset();
   position: relative;
   margin-bottom: 21px;
+
   &::before {
     content: "";
     position: absolute;
@@ -64,18 +75,21 @@
     left: -35px;
     width: 71px;
     height: 71px;
-    background-image: url(../img/rogovaya-back-mobile@1x.png);
+    background-image: url("../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center;
-    @media (min-resolution: @retina-dpi), (min-resolution:@retina-dppx) {
-      background-image: url(../img/rogovaya-back-mobile@2x.png);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/rogovaya-back-mobile@2x.png");
       background-size: 71px auto;
     }
   }
 }
+
 .companions__item {
   margin-bottom: 12px;
 }
+
 .companions__all {
   .square-btn();
   display: flex;
@@ -83,19 +97,24 @@
   align-items: center;
   border-radius: 10px;
   padding: 22px 24px;
+
   &:hover {
     background-color: #ffbd30;
   }
+
   &:active {
     color: fade(@main-blue, 30%);
   }
 }
+
 .companions__all:active .companions__all-arrow {
   opacity: 0.3;
 }
+
 .companions__all-arrow {
   fill: @main-blue;
 }
+
 @media (min-width: @tablet-width) {
   .companions {
     padding: 60px 0 88px 0;
@@ -104,60 +123,74 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
   .companions__wrapper {
     .centering(@width: 688px, @padding: 40px);
     padding-top: 80px;
   }
+
   .companions__inner {
     padding: 13px 35px 0 35px;
-    background-image: url(../img/smolov-back-desktop@1x.png), url(../img/rogovaya-back-desktop@1x.png);
+    background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
     background-position: left top 346px, right 35px top;
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../img/smolov-back-desktop@2x.png), url(../img/rogovaya-back-desktop@2x.png);
+      background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-desktop@2x.png");
       background-size: 143px auto, 285px auto;
     }
+
     &::before {
       width: 213px;
       height: 213px;
       left: 0;
     }
   }
+
   .companions__desc {
     width: 430px;
     padding: 0;
   }
+
   .companions__title {
     margin: 45px 0 58px -4px;
     font-size: 45px;
     line-height: 45px;
   }
+
   .companions__text br {
     display: inline;
   }
+
   .companions__text {
     margin: 40px 0 40px 0;
     font-size: 28px;
     line-height: 33px;
+
     &--bold {
       font-size: 21px;
       line-height: 25px;
     }
   }
+
   .companions__list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 60px;
     margin-bottom: 68px;
+
     &::before {
       display: none;
     }
   }
+
   .companions__item {
     margin-right: 48px;
+
     &:last-child {
       margin-right: 0;
     }
   }
+
   .companions__all {
     font-size: 24px;
     line-height: 24px;
@@ -165,30 +198,37 @@
     border-radius: 20px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .companions {
     padding: 60px 0 80px 0;
   }
+
   .companions__wrapper {
     .centering(@width: 1320px, @padding: 60px);
     position: relative;
     padding-top: 68px;
   }
+
   .companions__inner {
     padding: 13px 690px 54px 71px;
     background-position: right 690px top 65px, left 131px bottom;
   }
+
   .companions__desc {
     margin-bottom: 85px;
   }
+
   .companions__list {
     position: absolute;
     right: 0;
     top: 5px;
   }
+
   .companions__item {
     margin-right: 60px;
   }
+
   .companions__all {
     display: inline-flex;
     min-width: 280px;

@@ -6,11 +6,13 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .dropdown-block__table {
   width: 100%;
   text-align: center;
   border-collapse: collapse;
 }
+
 .dropdown-block__letter {
   height: 40px;
   width: 20%;
@@ -21,10 +23,12 @@
   color: @main-blue;
   text-transform: uppercase;
   border: 1px solid #cbced9;
+
   &--active {
     background-color: #edeff6;
   }
 }
+
 .dropdown-block__list-countries {
   .list-reset();
   padding: 12px 19px 19px 19px;
@@ -34,18 +38,23 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
 .dropdown-block__country {
   cursor: pointer;
+
   &:hover {
     color: @main-blue;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 .dropdown-block__country-link {
   color: @base-text-color;
 }
+
 .dropdown-block__btn-close {
   font-size: 16px;
   line-height: 30px;
@@ -56,27 +65,32 @@
   border: 0;
   border-radius: 20px;
 }
+
 @media (min-width: @tablet-width) {
   .dropdown-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 574px;
-    box-shadow: 0px 20px 50px 0px fade(@main-blue, 10%);
+    box-shadow: 0 20px 50px 0 fade(@main-blue, 10%);
   }
+
   .dropdown-block__table {
     width: 262px;
     margin: 35px 0 38px 27px;
   }
+
   .dropdown-block__letter {
     width: 52px;
     height: 68px;
     font-size: 20px;
+
     &--active {
       color: #ffffff;
       background-color: @main-blue;
     }
   }
+
   .dropdown-block__list-countries {
     width: 161px;
     padding: 33px 20px 35px 25px;
@@ -84,23 +98,28 @@
     border-left: 1px solid #eaecf2;
     border-radius: 0;
   }
+
   .dropdown-block__country {
     font-size: 20px;
     line-height: 30px;
   }
+
   .dropdown-block__countries-list {
     display: flex;
   }
+
   .dropdown-block__item {
     margin-right: 28px;
     font-size: 20px;
     line-height: 24px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .dropdown-block {
     width: 730px;
   }
+
   .dropdown-block__table {
     width: auto;
     margin-left: 13px;
@@ -109,14 +128,17 @@
     border-collapse: separate;
     border-spacing: 15px;
   }
+
   .dropdown-block__letter {
     width: 58px;
     height: 68px;
     border-radius: 3px;
+
     &:hover {
       border-color: #959bb2;
     }
   }
+
   .dropdown-block__list-countries {
     width: 195px;
     padding-top: 32px;

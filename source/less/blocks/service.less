@@ -5,6 +5,7 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 7;
+
   &::before {
     content: "";
     position: absolute;
@@ -18,52 +19,64 @@
     z-index: -1;
   }
 }
+
 .service__wrapper {
   .centering();
   padding-bottom: 67px;
-  background-image: url(../img/about-mobile@1x.png);
+  background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: right 10px bottom 0;
+
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url(../img/about-mobile@2x.png);
+    background-image: url("../img/about-mobile@2x.png");
     background-size: 292px auto;
   }
 }
+
 .service__inner {
   padding: 46px 25px 0 24px;
 }
+
 .service__title {
   margin: 20px 0;
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
 }
+
 .service__text {
   font-weight: 300;
   color: #ffffff;
+
   &--bold {
     margin-top: 21px;
     font-weight: 700;
   }
 }
+
 .service__text br {
   display: none;
 }
+
 .service__btn {
   display: none;
+
   &:hover {
     background-color: #ffbd30;
   }
 }
+
 .service__btn:active span,
 .service__btn:active .service__btn-img {
   opacity: 0.3;
 }
+
 @media (min-width: @tablet-width) {
   .service {
     padding: 140px 0 88px 0;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+
     &::before {
       top: 234px;
       width: 688px;
@@ -72,34 +85,41 @@
       transform: translateX(50%);
     }
   }
+
   .service__wrapper {
     .centering(@width: 688px, @padding: 40px);
     padding-bottom: 0;
-    background-image: url(../img/about-tablet@1x.png);
+    background-image: url("../img/about-tablet@1x.png");
     background-position: right 8px bottom 0;
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../img/about-tablet@2x.png);
+      background-image: url("../img/about-tablet@2x.png");
       background-size: 376px auto;
     }
   }
+
   .service__inner {
     width: 300px;
     padding: 90px 35px 0 35px;
   }
+
   .service__title {
     margin: 42px 0;
     font-size: 45px;
     line-height: 45px;
   }
+
   .service__text {
     margin: 33px 0;
     font-size: 28px;
     line-height: 33px;
+
     &--bold {
       font-size: 21px;
       line-height: 25px;
     }
   }
+
   .service__btn {
     display: inline-flex;
     justify-content: space-between;
@@ -115,16 +135,19 @@
     background-color: @yellow-btn;
     border-radius: 20px;
   }
+
   .service__btn-img {
     fill: @main-blue;
   }
 }
+
 @media (min-width: @desktop-width) {
   .service {
     padding: 60px 0 0 0;
     margin-top: -60px;
     background-image: none;
     border-bottom-left-radius: 60px;
+
     &::before {
       top: 130px;
       width: 213px;
@@ -132,30 +155,37 @@
       transform: translateX(-446px);
     }
   }
+
   .service__wrapper {
     .centering(@width: 1320px, @padding: 60px);
     padding-top: 71px;
     padding-bottom: 163px;
-    background-image: url(../img/about-desktop@1x.png);
+    background-image: url("../img/about-desktop@1x.png");
     background-position: right 60px bottom 0;
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url(../img/about-desktop@2x.png);
+      background-image: url("../img/about-desktop@2x.png");
       background-size: 630px auto;
     }
   }
+
   .service__inner {
     width: 620px;
     padding: 14px 71px 0 71px;
   }
+
   .service__title {
     margin-bottom: 60px;
   }
+
   .service__text {
     margin: 38px 0;
+
     &--bold {
       width: 450px;
     }
   }
+
   .service__btn {
     margin-top: 48px;
   }

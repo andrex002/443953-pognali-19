@@ -4,9 +4,11 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
 .country picture {
   line-height: 0;
 }
+
 .country__desc {
   position: relative;
   display: flex;
@@ -16,6 +18,7 @@
   margin-top: -10px;
   background-color: #ffffff;
   border-radius: 10px;
+
   &::before {
     content: "";
     position: absolute;
@@ -30,27 +33,33 @@
     transform: translateY(-50%);
   }
 }
+
 .country--thailand .country__desc::before {
-  background-image: url(../img/flag-thailand.svg);
+  background-image: url("../img/flag-thailand.svg");
 }
+
 .country--france .country__desc::before {
-  background-image: url(../img/flag-france.svg);
+  background-image: url("../img/flag-france.svg");
 }
+
 .country--czech .country__desc::before {
-  background-image: url(../img/flag-czech.svg);
+  background-image: url("../img/flag-czech.svg");
 }
+
 .country__title {
   margin: 4px 0;
   font-size: 21px;
   line-height: 21px;
   color: #161c35;
 }
+
 .country__text {
   margin: 4px 0;
   line-height: 18px;
   font-weight: 500;
   color: fade(@base-text-color, 30%);
 }
+
 .country__user-amount {
   position: relative;
   padding-left: 18px;
@@ -58,6 +67,7 @@
   line-height: 30px;
   font-weight: 500;
   color: fade(@base-text-color, 30%);
+
   &::before {
     content: "";
     position: absolute;
@@ -65,22 +75,25 @@
     left: 0;
     width: 11px;
     height: 100%;
-    background-image: url(../img/user.svg);
+    background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-position: 0 center;
     background-size: 11px 11px;
     opacity: 0.1;
   }
 }
+
 @media (min-width: @tablet-width) {
   .country {
     flex-direction: row;
     border-radius: 20px;
   }
+
   .country__img {
     width: 186px;
     height: auto;
   }
+
   .country__desc {
     flex-direction: column;
     flex-grow: 1;
@@ -90,6 +103,7 @@
     margin-top: 0;
     border-radius: 0;
     order: -1;
+
     &::before {
       top: 15px;
       left: auto;
@@ -100,37 +114,45 @@
       transform: translate(52%, 0);
     }
   }
+
   .country__title {
     font-size: 24px;
     line-height: 24px;
   }
+
   .country__text {
     font-size: 20px;
     line-height: 20px;
   }
+
   .country__user-amount {
     margin-top: 12px;
     padding-left: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 20px;
     line-height: 30px;
+
     &::before {
       width: 20px;
       background-size: 20px 20px;
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .country {
     width: 559px;
   }
+
   .country__desc {
     padding-top: 18px;
+
     &::before {
       top: 23px;
       transform: translate(51%, 0);
     }
   }
+
   .country__user-amount {
     margin-top: 17px;
   }

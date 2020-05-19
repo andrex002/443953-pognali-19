@@ -5,13 +5,12 @@
   <meta charset="UTF-8">
   <title>Погнали: Попутчики</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
   <script src="js/picturefill.js" async></script>
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -1037,10 +1036,11 @@
                 </div>
               </div>
             </div>
-            <button class="filter__btn"><span>Показать</span></button>
+            <button class="filter-block__btn"><span>Показать</span></button>
           </section>
         </form>
         <article class="catalog-content">
+          <h2 class="visually-hidden">Каталог попутчиков</h2>
           <section class="travelmates">
             <h2 class="visually-hidden">Карточки попутчиков</h2>
             <ul class="travelmates__list">
@@ -1362,30 +1362,33 @@
             <a class="travelmates__show-more" href="travelmates.html">Показать еще</a>
           </section>
           <section class="pagination">
-            <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link">1</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">2</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3</a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">4</a>
-              </li>
-            </ul>
-            <div class="pagination__controls">
-              <a href="prev-page.html" class="pagination__btn pagination__btn--prev">
-                Назад
-                <span class="pagination__btn-icon"></span>
-              </a>
-              <a href="next-page.html" class="pagination__btn pagination__btn--next">
-                Вперед
-                <span class="pagination__btn-icon"></span>
-                </svg>
-              </a>
+            <h2 class="visually-hidden">Пагинация</h2>
+            <div class="pagination__inner">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
+              </ul>
+              <div class="pagination__controls">
+                <a href="prev-page.html" class="pagination__btn pagination__btn--prev">
+                  Назад
+                  <span class="pagination__btn-icon"></span>
+                </a>
+                <a href="next-page.html" class="pagination__btn pagination__btn--next">
+                  Вперед
+                  <span class="pagination__btn-icon"></span>
+                  </svg>
+                </a>
+              </div>
             </div>
           </section>
         </article>

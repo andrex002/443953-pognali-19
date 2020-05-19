@@ -7,46 +7,57 @@
   background-color: #192144;
   z-index: 3;
 }
+
 .registration__wrapper {
   .centering();
 }
+
 .registration__inner {
   padding-top: 50px;
 }
+
 .registration__title {
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
   text-align: center;
 }
+
 .registration__text-block {
   width: 210px;
   margin: 0 auto;
   margin-top: 21px;
   margin-bottom: 30px;
 }
+
 .registration__text {
   margin: 0;
   font-weight: 300;
   color: #ffffff;
   text-align: center;
 }
+
 .registration__form {
   margin-bottom: 29px;
 }
+
 .registration__text-link {
   color: @yellow-btn;
   text-decoration: underline;
+
   &:hover {
     color: @orange-title;
   }
+
   &:active {
     color: fade(@orange-title, 30%);
   }
 }
+
 .registration__contacts {
   margin-top: 19px;
 }
+
 @media (min-width: @tablet-width) {
   .registration {
     padding: 60px 0;
@@ -54,59 +65,75 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
   .registration__wrapper {
     .centering(@width: 688px, @padding: 40px);
   }
+
   .registration__inner {
     padding: 37px 35px 0 35px;
   }
+
   .registration__title {
     font-size: 45px;
     line-height: 45px;
   }
+
   .registration__text-block {
     width: auto;
     margin-top: 59px;
     margin-bottom: 64px;
   }
+
   .registration__text {
     font-size: 28px;
     line-height: 33px;
   }
+
   .registration__text br {
     display: none;
   }
+
   .registration__form {
     margin-bottom: 55px;
   }
+
   .registration__contacts {
     margin-top: 41px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .registration {
     padding-bottom: 103px;
   }
+
   .registration .contacts__link-img {
     width: 90px;
     height: 90px;
   }
+
   .registration .contacts__link-img svg {
     width: 36px;
     height: 36px;
   }
+
   .registration__wrapper {
     .centering(@width: 1320px, @padding: 60px);
   }
+
   .registration__inner {
     padding: 67px 74px 0 72px;
   }
+
   .registration__text-block {
     margin-bottom: 59px;
   }
+
   .registration__text {
     letter-spacing: 0.015em;
   }
+
   .registration__contacts {
     display: flex;
     justify-content: center;

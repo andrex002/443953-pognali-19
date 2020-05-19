@@ -4,12 +4,14 @@
   font-size: 0;
   line-height: 0;
 }
+
 .contacts-block__link {
   position: relative;
   display: block;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+
   &::before {
     content: "";
     position: absolute;
@@ -22,30 +24,38 @@
     background-size: 18px 18px;
     border-radius: 50%;
   }
+
   &--tel {
     background-color: @orange-title;
+
     &::before {
-      background-image: url(../img/topmenu-phone.svg);
+      background-image: url("../img/topmenu-phone.svg");
     }
+
     &:hover {
       background-color: #f26926;
     }
   }
+
   &--email {
     background-color: #ffbd30;
+
     &::before {
-      background-image: url(../img/topmenu-mail.svg);
+      background-image: url("../img/topmenu-mail.svg");
     }
+
     &:hover {
       background-color: @orange-title;
     }
   }
 }
+
 .contacts-block__link:active {
   &::before {
     opacity: 0.3;
   }
 }
+
 @media (min-width: @desktop-width) {
   .contacts-block__link {
     width: 50px;

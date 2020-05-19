@@ -1,6 +1,7 @@
 .site-list {
   .list-reset();
 }
+
 .site-list__item {
   font-size: 30px;
   line-height: 36px;
@@ -8,48 +9,58 @@
   text-align: center;
   text-transform: uppercase;
 }
+
 .site-list__link {
   color: @main-blue;
 }
+
 @media (min-width: @tablet-width) {
   .site-list__item {
     font-size: 60px;
     line-height: 71px;
     text-align: left;
   }
+
   .site-list__link {
     letter-spacing: -0.012em;
   }
 }
+
 @media (min-width: @desktop-width) {
   .site-list {
     display: flex;
   }
+
   .site-list__item {
     margin: 0 18px;
     line-height: 0;
   }
+
   .site-list__link {
     display: inline-block;
     font-size: 20px;
     line-height: 30px;
     color: #ffffff;
     overflow: hidden;
+
     &:active {
       opacity: 0.3;
     }
   }
+
   .site-list__link span {
     position: relative;
     display: inline-block;
     transition: transform 0.3s;
+
     &::before {
       content: attr(data-hover);
       position: absolute;
       top: 100%;
       color: @yellow-btn;
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
+
     &:hover {
       transform: translateY(-100%);
     }

@@ -4,10 +4,12 @@
   font-size: 0;
   line-height: 0;
 }
+
 .list-steps__item {
   position: relative;
   margin: 0 8px;
   text-transform: uppercase;
+
   &::before {
     content: "";
     display: block;
@@ -16,29 +18,35 @@
     background-color: #bbbfcc;
     border-radius: 50%;
   }
+
   &--current {
     color: @main-blue;
+
     &::before {
       background-color: @main-blue;
     }
   }
 }
+
 @media (min-width: @tablet-width) {
   .list-steps__item {
     margin: 0;
     margin-left: 29px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .list-steps {
     font-size: 20px;
     line-height: 20px;
   }
+
   .list-steps__item {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
     letter-spacing: 0.1em;
+
     &::before {
       margin-right: 37px;
     }

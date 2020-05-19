@@ -7,6 +7,7 @@
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
 }
+
 .calendar__month-year {
   font-size: 20px;
   line-height: 20px;
@@ -14,6 +15,7 @@
   color: @main-blue;
   text-align: center;
 }
+
 .calendar__btn {
   font-size: 0;
   padding: 0;
@@ -21,13 +23,16 @@
   border: 0;
   opacity: 0.3;
   cursor: pointer;
+
   &:hover {
     opacity: 0.5;
   }
+
   &:active {
     opacity: 0.1;
   }
 }
+
 .calendar__table {
   width: 100%;
   font-size: 14px;
@@ -35,24 +40,29 @@
   text-align: center;
   border-collapse: collapse;
 }
+
 .calendar__weekday {
   width: 29px;
   height: 29px;
   font-weight: 400;
+
   &--weekend {
     color: #ff5c23;
   }
 }
+
 .calendar__weekday span,
 .calendar__day-info,
 .calendar__month-name {
   display: none;
 }
+
 .calendar__day {
   width: 29px;
   height: 29px;
   border: 1px solid #cbced9;
   background-color: #edeff6;
+
   &:hover {
     outline: 2px solid #ff5c23;
     outline-offset: -1px;
@@ -60,9 +70,11 @@
     cursor: pointer;
     color: #ffffff;
   }
+
   &--disabled {
     background-color: #ffffff;
     color: fade(@base-text-color, 30%);
+
     &:hover {
       background-color: #ffffff;
       color: fade(@base-text-color, 30%);
@@ -71,82 +83,101 @@
       outline: none;
     }
   }
+
   &--checked {
     background-color: @main-blue;
     color: #ffffff;
   }
+
   &--current {
     outline: 2px solid #ff5c23;
     outline-offset: -1px;
   }
 }
+
 @media (min-width: @tablet-width) {
   .calendar__info {
     padding: 25px 15px;
     margin-bottom: 30px;
   }
+
   .calendar__month-year {
     font-size: 36px;
     line-height: 36px;
   }
+
   .calendar__btn-img {
     width: 19px;
     height: 34px;
   }
+
   .calendar__table-head {
     font-size: 18px;
     line-height: 30px;
   }
+
   .calendar__table-row {
     font-size: 20px;
     line-height: 18px;
   }
+
   .calendar__day {
     height: 69px;
     padding: 0;
     box-sizing: border-box;
+
     &--current {
       outline-width: 4px;
     }
+
     &:hover {
       outline-width: 4px;
     }
   }
+
   .calendar__weekday {
     height: 34px;
   }
+
   .calendar__weekday span {
     display: inline;
     text-transform: lowercase;
   }
 }
+
 @media (min-width: @desktop-width) {
   .calendar__info {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
   }
+
   .calendar__table {
     text-align: left;
   }
+
   .calendar__table-row {
     vertical-align: top;
   }
+
   .calendar__weekday {
     height: 53px;
     padding-left: 17px;
   }
+
   .calendar__day {
     height: 71px;
     width: 143px;
     padding-top: 13px;
     padding-left: 15px;
   }
+
   .calendar__day-info {
     display: block;
     margin: 8px 0;
     letter-spacing: 0.05em;
   }
+
   .calendar__month-name {
     display: inline;
     letter-spacing: 0.05em;

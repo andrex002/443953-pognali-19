@@ -5,21 +5,26 @@
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
+
 .my-plan__wrapper {
   .centering();
 }
+
 .my-plan__inner {
   padding: 7px 0 20px 0;
 }
+
 .my-plan__title {
   font-size: 24px;
   line-height: 24px;
   color: @main-blue;
 }
+
 .my-plan__list {
   .list-reset();
   margin-top: 31px;
 }
+
 .my-plan__item {
   padding: 23px 24px 20px 24px;
   margin: 10px 0;
@@ -27,28 +32,32 @@
   background-color: #ffffff;
   border-radius: 10px;
 }
+
 .my-plan__route {
   margin-top: 0;
   margin-bottom: 21px;
   font-size: 16px;
   line-height: 16px;
+
   &::before {
     content: attr(data-number);
     margin-right: 5px;
   }
 }
+
 .my-plan__text {
   margin: 5px 0;
   font-size: 14px;
   line-height: 14px;
   font-weight: 500;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+
   &--date-of-stay {
     margin-bottom: 20px;
   }
 }
+
 .my-plan__edit-btn {
   margin-left: 2px;
   font-size: 14px;
@@ -57,27 +66,34 @@
   color: fade(#000000, 30%);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
   &:hover {
     color: fade(#000000, 60%);
   }
+
   &:active {
     color: fade(#000000, 10%);
   }
 }
+
 @media (min-width: @tablet-width) {
   .my-plan__wrapper {
     .centering(@width: 688px, @padding: 40px);
   }
+
   .my-plan__inner {
     padding: 18px 35px 65px 35px;
   }
+
   .my-plan__title {
     font-size: 36px;
     line-height: 50px;
   }
+
   .my-plan__list {
     margin-top: 43px;
   }
+
   .my-plan__item {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +101,7 @@
     align-items: center;
     padding: 0;
   }
+
   .my-plan__route {
     display: flex;
     justify-content: space-between;
@@ -96,6 +113,7 @@
     font-size: 24px;
     line-height: 50px;
     border-bottom: 1px solid #eff0f4;
+
     &::before {
       margin-right: 0;
       font-size: 20px;
@@ -104,28 +122,33 @@
       order: 2;
     }
   }
+
   .my-plan__data {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 18px 33px 16px 33px;
   }
+
   .my-plan__text {
     min-width: 170px;
     margin: 0;
     font-size: 20px;
     line-height: 20px;
+
     &--date-of-stay {
       min-width: 190px;
       text-align: center;
     }
   }
+
   .my-plan__edit-btn {
     margin-left: 80px;
     font-size: 20px;
     line-height: 20px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .my-plan {
     padding-bottom: 60px;
@@ -133,23 +156,29 @@
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
   }
+
   .my-plan__wrapper {
     .centering(@width: 1320px, @padding: 60px);
   }
+
   .my-plan__inner {
     padding: 15px 0 48px 63px;
   }
+
   .my-plan__title {
     padding-left: 6px;
   }
+
   .my-plan__list {
     margin-top: 44px;
   }
+
   .my-plan__item {
     padding: 23px 41px 25px 43px;
     margin: 15px 0;
     align-items: baseline;
   }
+
   .my-plan__route {
     justify-content: flex-start;
     width: 585px;
@@ -157,17 +186,20 @@
     padding-right: 20px;
     box-sizing: border-box;
     border: 0;
+
     &::before {
       order: 0;
       margin-right: 36px;
     }
   }
+
   .my-plan__data {
     justify-content: flex-start;
     width: auto;
     padding: 0;
     flex-grow: 1;
   }
+
   .my-plan__text {
     &--number-companions {
       min-width: 175px;
@@ -176,6 +208,7 @@
       box-sizing: border-box;
     }
   }
+
   .my-plan__edit-btn {
     margin-left: auto;
   }

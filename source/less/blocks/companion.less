@@ -1,15 +1,18 @@
 .companion {
   background-color: #ffffff;
   border-radius: 10px;
+
   &:hover {
     & .companion__image {
       transform: scale(1.2);
     }
   }
 }
+
 .companion--active .companion__name-link::before {
   background-color: #81e31e;
 }
+
 .companion__image-block {
   position: relative;
   line-height: 0;
@@ -17,9 +20,11 @@
   border-top-right-radius: 10px;
   overflow: hidden;
 }
+
 .companion__image {
   transition: all 0.3s ease;
 }
+
 .companion__desc {
   position: relative;
   display: flex;
@@ -27,6 +32,7 @@
   align-items: center;
   padding: 10px 18px 15px 18px;
 }
+
 .companion__level {
   position: absolute;
   top: 15px;
@@ -36,6 +42,7 @@
   font-weight: 700;
   color: #ffffff;
 }
+
 .companion__level-text {
   position: absolute;
   top: 50%;
@@ -47,6 +54,7 @@
   margin: 0;
   text-align: center;
 }
+
 .companion__level-text > span {
   display: block;
   padding-top: 2px;
@@ -55,15 +63,19 @@
   font-weight: 400;
   border-top: 1px solid #ffffff;
 }
+
 .companion__level-chart {
   fill-opacity: 0.6;
+
   &--firsova {
     stroke-dasharray: 99 1;
   }
+
   &--demin {
     stroke-dasharray: 80 20;
   }
 }
+
 .companion__countries {
   .list-reset();
   position: absolute;
@@ -73,16 +85,19 @@
   justify-content: center;
   width: 100%;
 }
+
 .companion__country-flag {
   position: relative;
   margin: 0 9.5px;
   line-height: 0;
+
   &:hover {
     & .tooltip {
       display: block;
     }
   }
 }
+
 .companion__name {
   position: relative;
   margin: 13px 17px 13px 0;
@@ -90,11 +105,13 @@
   line-height: 21px;
   text-align: center;
 }
+
 .companion__name-link {
   position: relative;
   padding-left: 17px;
   color: @main-blue;
-  &:before {
+
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -105,56 +122,69 @@
     border-radius: 50%;
     transform: translateY(-50%);
   }
+
   &:hover {
     opacity: 0.7;
   }
+
   &:active {
     opacity: 0.3;
   }
 }
+
 .companion__tags.tags-travelmates {
   padding: 0 15px;
   margin-bottom: 7px;
 }
+
 @media (min-width: @tablet-width) {
   .companion {
     width: 285px;
     padding-bottom: 7px;
     border-radius: 20px;
   }
+
   .companion__name {
     margin: 20px 22px 20px 0;
     font-size: 24px;
     line-height: 24px;
   }
+
   .companion__name-link {
     padding-left: 22px;
+
     &::before {
       width: 7px;
       height: 7px;
     }
   }
+
   .companion__desc {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .companion__image-block {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
+
   .companion__image {
     width: 285px;
     height: 285px;
   }
+
   .companion__level {
     top: 20px;
     left: 20px;
   }
+
   .companion__tags.tags-travelmates {
     margin-top: 2px;
     margin-bottom: 19px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .companion__level {
     top: 22px;

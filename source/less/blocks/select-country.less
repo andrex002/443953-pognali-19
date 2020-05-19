@@ -1,14 +1,16 @@
 .select-country {
   position: relative;
 }
+
 .select-country__head {
   position: relative;
   display: flex;
   padding-bottom: 22px;
-  background-image: url(../img/small-arrow.svg);
+  background-image: url("../img/small-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 50px bottom 6px;
   background-size: 5px;
+
   &::before {
     content: "";
     position: absolute;
@@ -21,27 +23,33 @@
     background-color: @main-blue;
     z-index: 3;
   }
+
   &--empty::before {
     background-color: #ffffff;
     border: 1px solid #cbced9;
   }
+
   &--opened::before {
     display: none;
   }
 }
+
 .select-country__head--opened + .select-country__dropdown-block {
   display: flex;
 }
+
 .select-country__head--opened .select-country__field {
   color: #ffffff;
   background-color: @main-blue;
   border-color: @main-blue;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
   &::after {
     background-image: linear-gradient(to right, transparent, @main-blue 45%);
   }
 }
+
 .select-country__field {
   position: relative;
   width: 168px;
@@ -57,6 +65,7 @@
   border: 1px solid #cbced9;
   border-radius: 5px;
   overflow: hidden;
+
   &::after {
     content: "";
     position: absolute;
@@ -66,36 +75,44 @@
     height: 100%;
     background-image: linear-gradient(to right, transparent, #ffffff 45%);
   }
+
   &--more {
     width: 100%;
     padding-left: 11px;
-    &:after {
+
+    &::after {
       display: none;
     }
   }
+
   &:hover {
     border-color: #959bb2;
   }
 }
+
 .select-country__field:hover .select-country__arrow-block {
   opacity: 0.5;
 }
+
 .select-country__head--opened .select-country__arrow-block {
-  background-image: url(../img/small-cross.svg);
+  background-image: url("../img/small-cross.svg");
+
   &:hover {
     opacity: 1;
   }
+
   &:active {
     opacity: 0.1;
   }
 }
+
 .select-country__arrow-block {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 40px;
-  background-image: url(../img/dropdown-form.svg);
+  background-image: url("../img/dropdown-form.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px;
@@ -103,6 +120,7 @@
   z-index: 2;
   cursor: pointer;
 }
+
 .select-country__flag {
   position: relative;
   line-height: 0;
@@ -110,6 +128,7 @@
   border: 1px solid #cbced9;
   border-radius: 5px;
 }
+
 .select-country__close-btn {
   position: absolute;
   top: -10.5px;
@@ -123,9 +142,11 @@
   border-radius: 50%;
   cursor: pointer;
 }
+
 .select-country__close-img {
   fill-opacity: 0.3;
 }
+
 .select-country__dropdown-block {
   display: none;
   position: absolute;
@@ -133,22 +154,26 @@
   left: 0;
   z-index: 3;
 }
+
 @media (min-width: @tablet-width) {
   .select-country__head {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 15px;
     background-image: none;
+
     &::before {
       bottom: 44px;
       right: 128px;
       width: 15px;
       height: 15px;
     }
+
     &--opened::before {
       display: block;
     }
   }
+
   .select-country__field {
     flex-grow: 0;
     width: 368px;
@@ -158,17 +183,21 @@
     font-size: 20px;
     line-height: 18px;
   }
+
   .select-country__arrow-block {
     width: 69px;
     background-size: 17px;
   }
+
   .select-country__flag {
     border-width: 0;
   }
+
   .select-country__flag-img {
     width: 70px;
     height: 47px;
   }
+
   .select-country__close-btn {
     position: static;
     width: 18px;
@@ -179,32 +208,39 @@
     border-radius: 0;
     padding: 0;
   }
+
   .select-country__close-img {
     width: 18px;
     height: 18px;
     fill-opacity: 0.1;
+
     &:hover {
       fill-opacity: 0.3;
     }
+
     &:active {
       fill-opacity: 0.05;
     }
   }
+
   .select-country__dropdown-block {
     top: calc(100% - 15px);
   }
 }
+
 @media (min-width: @desktop-width) {
   .select-country__head {
     &::before {
       right: 218px;
     }
   }
+
   .select-country__field {
     width: 730px;
     padding-left: 25px;
     margin-right: 77px;
   }
+
   .select-country__close-btn {
     margin-right: 6px;
   }

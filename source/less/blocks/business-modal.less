@@ -11,45 +11,54 @@
   animation: bounce 0.6s;
   overflow-y: auto;
 }
+
 .business-modal__wrapper {
   .centering();
 }
+
 .business-modal__inner {
   width: 100%;
   padding-top: 10px;
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow: 0px 20px 50px 0px rgba(29, 46, 91, 0.1);
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   overflow: hidden;
 }
+
 .business-modal__title {
   font-size: 24px;
   line-height: 24px;
   color: @orange-title;
   text-align: center;
 }
+
 .business-modal__list {
   .list-reset();
   padding: 0 25px;
   margin-top: 33px;
   margin-bottom: 33px;
 }
+
 .business-modal__item {
   padding: 12px 0;
   border-top: 1px solid #f2f2f2;
+
   &:last-child {
     border-bottom: 1px solid #f2f2f2;
   }
 }
+
 .business-modal__text {
   margin: 0;
   font-weight: 300;
 }
+
 .business-modal__footer {
   padding: 17.5px 20px;
   background-color: #f3f4f8;
   text-align: center;
 }
+
 .business-modal__close-btn {
   font-size: 16px;
   line-height: 24px;
@@ -59,52 +68,64 @@
   border: 0;
   background-color: transparent;
   cursor: pointer;
+
   &:active {
     opacity: 0.3;
   }
 }
+
 @media (min-width: @tablet-width) {
   .business-modal__inner {
     padding-top: 5px;
     border-radius: 30px;
   }
+
   .business-modal__wrapper {
     .centering(@width: 688px, @padding: 40px);
   }
+
   .business-modal__title {
     margin: 45px 0;
     font-size: 45px;
     line-height: 45px;
   }
+
   .business-modal__text {
     font-size: 22px;
     line-height: 28px;
   }
+
   .business-modal__list {
     padding: 0 91px;
     margin-bottom: 51px;
   }
+
   .business-modal__item {
     display: flex;
     justify-content: space-between;
     padding: 13px 0;
   }
+
   .business-modal__footer {
     padding: 42px 0;
   }
+
   .business-modal__close-btn {
     font-size: 24px;
     text-transform: none;
   }
 }
+
 @media (min-width: @desktop-width) {
   .business-modal__inner {
     width: 750px;
     margin: 0 auto;
   }
+
   .business-modal__wrapper {
     .centering(@width: 1320px, @padding: 60px);
   }
+
   .business-modal__list {
     padding: 0 60px;
   }

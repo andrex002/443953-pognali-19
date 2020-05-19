@@ -3,10 +3,12 @@
   background-color: @yellow-btn;
   border-radius: 20px;
 }
+
 .filter-block__inner {
   padding: 0 25px 0 25px;
   margin-bottom: 22px;
 }
+
 .filter-block__title {
   margin: 0;
   margin-bottom: 23px;
@@ -14,58 +16,112 @@
   line-height: 22.5px;
   color: @main-blue;
 }
+
 .filter-block__transport {
   margin-bottom: 18px;
 }
+
+.filter-block__btn {
+  display: block;
+  width: 230px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #161c35;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    background-color: #f3c72b;
+  }
+}
+
+.filter__btn:active span {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .filter-block {
     padding: 35px 34px 38px 35px;
   }
+
   .filter-block__inner {
     padding: 0;
     margin-bottom: 36px;
   }
+
   .filter-block__title {
     margin-bottom: 39px;
     font-size: 30px;
     line-height: 30px;
   }
+
   .filter-block__item {
     margin-bottom: 20px;
+
     &--transport {
       margin-top: 22px;
       margin-bottom: 13px;
     }
   }
+
   .filter-block__data-input {
     padding-top: 32px;
     padding-bottom: 16px;
     border-top: 1px solid #f3c72b;
     border-bottom: 1px solid #f3c72b;
   }
+
+  .filter-block__btn {
+    width: 100%;
+    padding: 10px 24px 10px 20px;
+    font-size: 20px;
+    border-radius: 25px;
+  }
 }
+
 @media (min-width: @desktop-width) {
   .filter-block {
     padding: 47px 48px;
   }
+
   .filter-block__inner {
     margin-bottom: 37px;
   }
+
   .filter-block__data-input {
     border: 0;
     padding-top: 0;
     padding-bottom: 0;
   }
+
   .filter-block__title {
     margin-bottom: 30px;
   }
+
   .filter-block__item {
     margin-bottom: 11px;
+
     &--transport {
       margin-top: 0;
     }
   }
+
   .filter-block__item--level .filter__body {
     margin-top: 15px;
+  }
+
+  .filter-block__btn {
+    width: 196px;
   }
 }

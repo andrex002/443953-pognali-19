@@ -7,21 +7,25 @@
   border-bottom-right-radius: 30px;
   z-index: 4;
 }
+
 .add-yourself__wrapper {
   .centering();
   padding-top: 37px;
 }
+
 .add-yourself__inner {
   padding-top: 14px;
   padding-left: 24px;
-  background-image: url(../img/rates@1x.png);
+  background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 99px;
+
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url(../img/rates@2x.png);
+    background-image: url("../img/rates@2x.png");
   }
 }
+
 .add-yourself__title {
   width: 150px;
   margin-top: 0;
@@ -30,15 +34,18 @@
   line-height: 24px;
   color: @orange-title;
 }
+
 .add-yourself__tariffs {
   margin-top: 45px;
   margin-bottom: 26px;
 }
+
 .add-yourself__business-tariff {
   line-height: 16px;
   font-weight: 700;
   color: #192144;
 }
+
 @media (min-width: @tablet-width) {
   .add-yourself {
     padding: 60px 0 45px 0;
@@ -46,9 +53,11 @@
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
+
   .add-yourself__wrapper {
     .centering(@width: 688px, @padding: 40px);
   }
+
   .add-yourself__inner {
     padding-top: 14px;
     padding-left: 0;
@@ -56,6 +65,7 @@
     padding-bottom: 13px;
     background-position: right 46px bottom 0;
   }
+
   .add-yourself__title {
     width: auto;
     margin: 20px 0;
@@ -63,10 +73,12 @@
     line-height: 45px;
     text-align: center;
   }
+
   .add-yourself__tariffs {
     position: relative;
     margin-top: 76px;
     margin-bottom: 34px;
+
     &::before {
       content: "";
       position: absolute;
@@ -79,6 +91,7 @@
       z-index: -1;
     }
   }
+
   .add-yourself__business-tariff {
     position: relative;
     display: inline-flex;
@@ -86,6 +99,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #132576;
+
     &::before {
       content: "";
       display: inline-block;
@@ -95,6 +109,7 @@
       background-color: #e2e5f2;
       border-radius: 50%;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -102,41 +117,50 @@
       top: 0;
       width: 67px;
       height: 67px;
-      background-image: url(../img/business.svg);
+      background-image: url("../img/business.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 17px 21px;
       border-radius: 50%;
     }
+
     &:hover {
       color: fade(#132576, 70%);
+
       &::after {
         opacity: 0.7;
       }
     }
+
     &:active {
       color: fade(#132576, 30%);
+
       &::after {
         opacity: 0.3;
       }
     }
   }
 }
+
 @media (min-width: @desktop-width) {
   .add-yourself {
     padding-bottom: 160px;
   }
+
   .add-yourself__wrapper {
     .centering(@width: 1320px, @padding: 60px);
   }
+
   .add-yourself__inner {
     padding: 47px 71px 0 71px;
     background-position: right 75px top 250px;
     background-size: 198px;
   }
+
   .add-yourself__tariffs {
     margin-top: 135px;
     margin-bottom: 32px;
+
     &::before {
       top: -48px;
       width: 444px;
