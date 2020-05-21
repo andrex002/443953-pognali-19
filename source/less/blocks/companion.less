@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 18px 15px 18px;
+  padding: 10px 30px 15px;
 }
 
 .companion__level {
@@ -100,7 +100,7 @@
 
 .companion__name {
   position: relative;
-  margin: 13px 17px 13px 0;
+  margin: 13px 0;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -108,14 +108,13 @@
 
 .companion__name-link {
   position: relative;
-  padding-left: 17px;
   color: @main-blue;
 
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 14px;
+    left: -16px;
     width: 5px;
     height: 5px;
     background-color: #f97676;
@@ -133,8 +132,8 @@
 }
 
 .companion__tags.tags-travelmates {
-  padding: 0 15px;
-  margin-bottom: 7px;
+  margin-top: 3px;
+  margin-bottom: 12px;
 }
 
 @media (min-width: @tablet-width) {
@@ -145,23 +144,17 @@
   }
 
   .companion__name {
-    margin: 20px 22px 20px 0;
+    margin: 20px 0;
     font-size: 24px;
     line-height: 24px;
   }
 
   .companion__name-link {
-    padding-left: 22px;
-
     &::before {
+      left: -22px;
       width: 7px;
       height: 7px;
     }
-  }
-
-  .companion__desc {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .companion__image-block {
@@ -180,8 +173,8 @@
   }
 
   .companion__tags.tags-travelmates {
-    margin-top: 2px;
-    margin-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 }
 

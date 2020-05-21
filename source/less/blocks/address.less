@@ -19,7 +19,7 @@
 .address__text {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-right: 5px;
   font-weight: 700;
   color: #192144;
@@ -34,6 +34,10 @@
     background-color: #121936;
     border-radius: 50%;
     flex-shrink: 0;
+    background-image: url("../img/icon-contacts-location.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 22px;
   }
 }
 
@@ -72,7 +76,6 @@
   position: absolute;
   top: 50%;
   left: 22.5px;
-  fill: @yellow-btn;
   transform: translate(-50%, -50%);
 }
 
@@ -95,11 +98,13 @@
   .address__text {
     font-size: 28px;
     line-height: 28px;
+    align-items: center;
 
     &::before {
       width: 68px;
       height: 68px;
       margin-right: 25px;
+      background-size: 21px 32px;
     }
   }
 
@@ -136,12 +141,14 @@
   }
 
   .address__text {
+    padding-right: 20px;
     margin-left: 149px;
 
     &::before {
       width: 90px;
       height: 90px;
       margin-right: 31px;
+      background-size: 28px 43px;
     }
   }
 
@@ -153,9 +160,6 @@
 
   .address__link {
     margin-top: 0;
-  }
-
-  .address__link-arrow {
-    margin-left: 20px;
+    min-width: 324px;
   }
 }

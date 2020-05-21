@@ -1,21 +1,22 @@
+const pageHeader = document.querySelector('.page-header');
 const mainNav = document.querySelector('.main-nav');
-const mainNavToogle = document.querySelector('.main-nav__toogle');
+const mainNavToggle = document.querySelector('.main-nav__toggle');
 const showTariffs = document.querySelector('.add-yourself__business-tariff');
 const businessModal = document.querySelector('.business-modal');
 const businessModalClose = document.querySelector('.business-modal__close-btn');
-const selectCountryToogle = document.querySelectorAll('.select-country__arrow-block');
+const selectCountryToggle = document.querySelectorAll('.select-country__arrow-block');
 const selectCountryBlock = document.querySelectorAll('.select-country__head');
 const filterCountry = document.querySelector('.filter-country');
-const filterCountryToggle = document.querySelector('.filter-country__toogle');
+const filterCountryToggle = document.querySelector('.filter-country__toggle');
 const btnCloseCountryFilter = document.querySelector('.list-countries__btn-close');
 const filterTitle = document.querySelectorAll('.filter__title');
 const filter = document.querySelectorAll('.filter');
 let openedMenu = true;
-mainNav.classList.remove('main-nav--no-js');
-mainNavToogle.addEventListener('click', function() {
+pageHeader.classList.remove('page-header--no-js');
+showsHidesMenu();
+mainNavToggle.addEventListener('click', function() {
   document.body.style.overflow = openedMenu ? 'hidden' : '';
-  mainNav.classList.toggle('main-nav--opened');
-  mainNav.classList.toggle('main-nav--closed');
+  showsHidesMenu();
   openedMenu = !openedMenu;
 });
 window.onscroll = function() {
@@ -48,14 +49,24 @@ let filterClickHandler = function(toggler, block, className) {
   });
 };
 if(filter) {
+  showsHidesFilters();
   for(let i = 0; i < filter.length; i++) {
     filterClickHandler(filterTitle[i], filter[i], 'filter--closed');
   }
 }
 if(selectCountryBlock) {
-  for(let i = 0; i < selectCountryToogle.length; i++) {
-    filterClickHandler(selectCountryToogle[i], selectCountryBlock[i], 'select-country__head--opened');
+  for(let i = 0; i < selectCountryToggle.length; i++) {
+    filterClickHandler(selectCountryToggle[i], selectCountryBlock[i], 'select-country__head--opened');
   }
+}
+function showsHidesFilters() {
+  for(var i = 0; i < filter.length; i++) {
+    filter[i].classList.toggle('filter--closed');
+  }
+}
+function showsHidesMenu() {
+  mainNav.classList.toggle('main-nav--opened');
+  mainNav.classList.toggle('main-nav--closed');
 }
 function closeTariffs(evt) {
   evt.preventDefault();

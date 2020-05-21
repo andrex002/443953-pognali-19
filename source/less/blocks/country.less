@@ -5,8 +5,11 @@
   overflow: hidden;
 }
 
-.country picture {
+.country__img-block {
+  display: flex;
+  align-items: center;
   line-height: 0;
+  background-color: #cccccc;
 }
 
 .country__desc {
@@ -97,10 +100,12 @@
   .country__desc {
     flex-direction: column;
     flex-grow: 1;
+    width: 432px;
     padding-top: 24px;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 0;
+    box-sizing: border-box;
     border-radius: 0;
     order: -1;
 
@@ -145,6 +150,7 @@
   }
 
   .country__desc {
+    width: 373px;
     padding-top: 18px;
 
     &::before {
